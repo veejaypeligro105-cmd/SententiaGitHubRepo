@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cmq43t1srawas"]
+
+[ext_resource type="Script" uid="uid://bvb0bdcs0khxe" path="res://SkillResource.gd" id="1_vtqee"]
+
+[resource]
+script = ExtResource("1_vtqee")
+SkillName = "Lester_Special Attack"
+SkillPower = 500.0
+SkillType = "Int"

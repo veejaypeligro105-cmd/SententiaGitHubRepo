@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d2o1v3q1f8avk"]
+
+[ext_resource type="PackedScene" uid="uid://cd76butibxcge" path="res://AceGameManager.tscn" id="1_g0f3f"]
+[ext_resource type="PackedScene" uid="uid://j5k2l3hf7oig" path="res://AceCombatScene.tscn" id="2_ge4vr"]
+[ext_resource type="PackedScene" uid="uid://clr8jy8dcf4bo" path="res://logic_engine.tscn" id="3_ge4vr"]
+
+[node name="MainCombatScene" type="Node" unique_id=351313384]
+
+[node name="SAceGameManager" parent="." unique_id=1575394475 instance=ExtResource("1_g0f3f")]
+
+[node name="LogicEngine" parent="." unique_id=1802617622 instance=ExtResource("3_ge4vr")]
+
+[node name="InGame" parent="." unique_id=1449282688 instance=ExtResource("2_ge4vr")]

@@ -1,0 +1,83 @@
+~ start
+Darwin: Alright... explain it quickly.
+Logos: In this world, enemies attack using statements. Your task is to determine what those statements mean.
+Darwin: So I fight by answering questions?
+Logos: Correct. If your answer is correct, you deal damage. If you are wrong, you lose Mental Stability.
+Logos: You only need a few symbols to begin.
+Logos: The symbol ¬ means NOT, and it flips the truth of a statement.
+Logos: The symbol ∧ means AND, which requires both parts to be true.
+Logos: The symbol ∨ means OR, which is true if at least one part is true.
+Darwin: ...That's it?
+Logos: For now. You will learn the rest as you progress.
+Logos: The first floor will test how well you understand truth itself. 
+
+#Evaluation
+Logos: Answer these before you proceed.
+
+~ question_1
+Logos: First: What does ¬P mean?
+- A. It means P is always true.
+	Logos: No. You are reversing meaning incorrectly. ¬ always flips truth.
+	=> question_1
+
+- B. It means P is false (NOT P)
+	Logos: Correct. ¬ negates the statement entirely.
+	~ question_2
+	Logos: Second: If P is true, what happens to ¬P?
+	- A. It becomes true
+		Logos: No. You are ignoring inversion.
+		=> question_2
+
+	- B. It becomes undefined
+		Logos: No. You are ignoring inversion.
+		=> question_2
+
+	- C. It becomes false
+		Logos: Correct. Negation flips truth.
+		~ question_3
+		Logos: Third: When is P ∧ Q true?
+		- A. When at least one is true
+			Logos: No. AND requires full agreement.
+			=> question_3
+
+		- B. When both are true
+			Logos: Correct. Both conditions must hold.
+			~ question_4
+			Logos: Fourth: When is P ∨ Q false?
+			- A. When both are true
+				Logos: No. OR only collapses when both sides fail.
+				=> question_4
+
+			- B. When both are false 
+				Logos: Correct. OR fails only when nothing is true.
+				Logos: You may now proceed.
+				=> END
+
+			- C. When one is true
+				Logos: No. OR only collapses when both sides fail.
+				=> question_4
+
+			- D. Never false
+				Logos: No. OR only collapses when both sides fail.
+				=> question_4
+
+		- C. When both are false
+			Logos: No. AND requires full agreement.
+			=> question_3
+
+		- D. When P is false only
+			Logos: No. AND requires full agreement.
+			=> question_3
+
+	- D. It becomes both true and false
+		Logos: No. You are ignoring inversion.
+		=> question_2
+
+- C. It means P and Q are both true
+	Logos: No. You are reversing meaning incorrectly. ¬ always flips truth.
+	=> question_1
+
+- D. It means P or Q is true
+	Logos: No. You are reversing meaning incorrectly. ¬ always flips truth.
+	=> question_1
+=> END

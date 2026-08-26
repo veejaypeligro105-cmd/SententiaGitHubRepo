@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dvbtdkb6bd7ls"]
+
+[ext_resource type="Script" uid="uid://c1e5uoh5rnmpk" path="res://inventory_ui.gd" id="1_tv73d"]
+
+[node name="InventoryUi" type="CanvasLayer" unique_id=1675288941 groups=["InventoryUI"]]
+script = ExtResource("1_tv73d")
+
+[node name="Inventory_UI" type="Control" parent="." unique_id=480632995]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Inventory_UI" unique_id=1750450557]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 650.0
+
+[node name="ItemList" type="VBoxContainer" parent="Inventory_UI/Panel" unique_id=1837748591]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 24.0
+offset_right = 1131.0
+offset_bottom = 422.0
+
+[node name="Descriptionlabel" type="Panel" parent="Inventory_UI/Panel" unique_id=1820819893]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 469.0
+offset_right = 792.0
+offset_bottom = 635.0
+
+[node name="Descriptionlabel" type="Label" parent="Inventory_UI/Panel/Descriptionlabel" unique_id=790598215]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.060000002
+anchor_right = 0.9710001
+anchor_bottom = 0.89800006
+offset_left = 0.37199974
+offset_top = 0.03999996
+offset_right = 0.15594482
+offset_bottom = -0.06800842
+
+[node name="Use" type="Button" parent="Inventory_UI/Panel" unique_id=2076517628]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 581.0
+offset_right = 991.0
+offset_bottom = 631.0
+text = "Use
+"
+
+[node name="Close" type="Button" parent="Inventory_UI/Panel" unique_id=2079899926]
+layout_mode = 0
+offset_left = 1013.0
+offset_top = 581.0
+offset_right = 1109.0
+offset_bottom = 631.0
+text = "Close"
+
+[connection signal="pressed" from="Inventory_UI/Panel/Use" to="." method="_on_use_pressed"]
+[connection signal="pressed" from="Inventory_UI/Panel/Close" to="." method="_on_close_pressed"]

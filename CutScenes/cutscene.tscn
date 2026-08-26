@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dk2ple7csni44"]
+
+[ext_resource type="Script" uid="uid://b7khl1s1rfdpw" path="res://cutscene.gd" id="1_to3s7"]
+[ext_resource type="VideoStream" uid="uid://37gblutdcrrm" path="res://CutScenes/Timeline-1.ogv" id="2_nya67"]
+
+[node name="Cutscene" type="Control" unique_id=1595968146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_to3s7")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1436189008]
+layout_mode = 1
+offset_left = -13.0
+offset_top = -4.0
+offset_right = 2315.0
+offset_bottom = 1296.0
+scale = Vector2(0.61, 0.61)
+stream = ExtResource("2_nya67")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1845203625]
+position = Vector2(575, 323)
+
+[node name="Button" type="Button" parent="." unique_id=2042657072]
+layout_mode = 0
+offset_left = 1007.0
+offset_top = 595.0
+offset_right = 1137.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 25
+text = "Skip"
+
+[node name="PauseLabel" type="Label" parent="." unique_id=461670543]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 283.0
+offset_right = 531.0
+offset_bottom = 318.0
+scale = Vector2(3, 3)
+text = "====Paused===="
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

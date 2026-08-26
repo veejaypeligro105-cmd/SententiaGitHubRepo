@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://dhfye53jstjhv"]
+
+[ext_resource type="Resource" uid="uid://chhb7ajfkcptu" path="res://Skills/Attack.tres" id="1_8021e"]
+[ext_resource type="Script" uid="uid://dcg2igglmcq5d" path="res://EntityResource.gd" id="1_npxyn"]
+[ext_resource type="Resource" uid="uid://n2dmk4x3mxhb" path="res://Skills/S_Attack.tres" id="2_m3ypq"]
+
+[resource]
+script = ExtResource("1_npxyn")
+MobName = "Blob"
+MaxHP = 25.0
+Str = 3
+Dex = 3
+Int = 3
+Skills = Array[Resource]([ExtResource("1_8021e"), ExtResource("2_m3ypq")])

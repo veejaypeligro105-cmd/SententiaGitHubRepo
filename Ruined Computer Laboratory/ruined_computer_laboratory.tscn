@@ -1,0 +1,380 @@
+[gd_scene format=3 uid="uid://5g7myc6i5in3"]
+
+[ext_resource type="PackedScene" uid="uid://jan3nx8g30d6" path="res://Ruined Computer Laboratory/ComputerLabRUINEED.glb" id="1_1gnxe"]
+[ext_resource type="PackedScene" uid="uid://5xrq7yv6yw5o" path="res://Scenes/player.tscn" id="2_26a8r"]
+[ext_resource type="Script" uid="uid://b3785u02v1lyg" path="res://Scenes/2Dhp_ui.gd" id="3_lk44e"]
+[ext_resource type="PackedScene" uid="uid://dep3b3jvfymoc" path="res://CoinIcon.tscn" id="4_xensm"]
+[ext_resource type="PackedScene" uid="uid://bfyajl6rkbbed" path="res://pause_menu_ig.tscn" id="5_xensm"]
+[ext_resource type="Script" uid="uid://c33olhnmvn0hs" path="res://Ruined Computer Laboratory/Exit.gd" id="6_8e04e"]
+
+[sub_resource type="Environment" id="Environment_26a8r"]
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.02
+
+[sub_resource type="Animation" id="Animation_lns63"]
+resource_name = "Lights"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpotLight3D:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3718435, 0.47108373, 0.56872904, 0.69960994, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpotLight3D2:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.69457674, 0.7965617, 0.894207),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpotLight3D3:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0003697425, 0.10235472, 0.2, 0.30031216, 0.39795747),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpotLight3D4:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.58720255, 0.6891875, 0.7868328),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpotLight3D5:light_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.24494736, 0.34693235, 0.44457763),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpotLight3D6:light_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.06375342, 0.1657384, 0.2633837),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpotLight3D7:light_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.7935623, 0.8955473, 0.99319255, 1.1, 1.1976453),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SpotLight3D8:light_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.1646817, 1.2666667, 1.3643119),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OmniLight3D:light_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.37077647, 0.47001672, 0.567662, 0.69854295, 0.798933),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OmniLight3D2:light_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.69457674, 0.7965617, 0.894207),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("OmniLight3D3:light_color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.10198498, 0.19963026, 0.29994243, 0.39758772),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("OmniLight3D4:light_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.58552486, 0.68750983, 0.7851551),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("OmniLight3D5:light_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.24326964, 0.34525463, 0.4428999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("OmniLight3D6:light_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.06375342, 0.1657384, 0.2633837),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("OmniLight3D7:light_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.7935623, 0.8955473, 0.99319255, 1.1, 1.1976453),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("OmniLight3D8:light_color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.1643388, 1.2663238, 1.3639691),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lk44e"]
+_data = {
+&"Lights": SubResource("Animation_lns63")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r5vv8"]
+size = Vector3(1, 2.180725, 1.6434937)
+
+[node name="Ruined Computer Laboratory" type="Node3D" unique_id=495803695]
+
+[node name="Player" parent="." unique_id=1772266486 instance=ExtResource("2_26a8r")]
+transform = Transform3D(0.0707891, -3.3436303, 4.9814777, 0, 4.981825, 3.343863, -5.9995823, -0.03945151, 0.058776483, -4.8277392, 0.1911701, -4.752786)
+
+[node name="ComputerLabRUINEED" parent="." unique_id=1169171766 instance=ExtResource("1_1gnxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111, 0.023, 0.108)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="ComputerLabRUINEED" unique_id=1965139664]
+environment = SubResource("Environment_26a8r")
+
+[node name="Lights" type="CanvasLayer" parent="ComputerLabRUINEED" unique_id=2112061981]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=1789368736]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3, 2, -3)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=450927950]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.9585142, 2, -0.98810124)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=511081764]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.046605, 2, -0.9709103)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=1330838969]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.046605, 2, 5.069893)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=841592305]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.0315151, 2, 5.069893)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=1367672661]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.0565224, 2, -5.000841)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=688887157]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.97780585, 2, 3.0269759)
+light_color = Color(0.65890336, 0.65890336, 0.65890336, 1)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="ComputerLabRUINEED/Lights" unique_id=1770936254]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.0565224, 2, 1.0395153)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ComputerLabRUINEED/Lights" unique_id=699499595]
+libraries/ = SubResource("AnimationLibrary_lk44e")
+autoplay = &"Lights"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=782228229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0429642, 1.9746383, -2.9939559)
+light_energy = 4.485
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=910268748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97286415, 1.9746383, -0.9985657)
+light_energy = 4.485
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=758957840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0598543, 1.9746383, -0.9945613)
+light_energy = 4.485
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=222613975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0598543, 1.9746383, 5.136146)
+light_energy = 4.485
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=81359176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0429642, 1.9746383, 5.07466)
+light_energy = 4.485
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=1722128853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0644643, 1.9746383, -4.953605)
+light_energy = 4.485
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=572092480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97286415, 1.9746383, 3.0736375)
+light_color = Color(0.65890336, 0.65890336, 0.65890336, 1)
+light_energy = 4.485
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="ComputerLabRUINEED/Lights" unique_id=1752475668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0644643, 1.9746383, 0.98538566)
+light_energy = 4.485
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=1604938928]
+
+[node name="Hp_ui" type="Control" parent="Ui" unique_id=1894061642]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 42.0
+offset_top = 577.0
+offset_right = 406.0
+offset_bottom = 661.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_lk44e")
+
+[node name="HpBar" type="ProgressBar" parent="Ui/Hp_ui" unique_id=835093511]
+modulate = Color(0, 0.79, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.21400002
+anchor_right = 1.0
+anchor_bottom = 1.179
+offset_left = 4.0
+offset_top = -7.9760017
+offset_bottom = -7.996025
+value = 100.0
+show_percentage = false
+
+[node name="HpCount" type="Label" parent="Ui/Hp_ui" unique_id=1943172553]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -16.0
+offset_right = 240.0
+offset_bottom = 70.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Panel" parent="Ui" unique_id=954793167 instance=ExtResource("4_xensm")]
+offset_left = 958.0
+offset_top = 17.0
+offset_right = 1139.0
+offset_bottom = 73.0
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1665966984]
+
+[node name="PauseMenuIG" parent="PauseMenu" unique_id=1455197487 instance=ExtResource("5_xensm")]
+
+[node name="Doors" type="CanvasLayer" parent="." unique_id=949483702]
+
+[node name="Area3D" type="Area3D" parent="Doors" unique_id=459920913]
+script = ExtResource("6_8e04e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Doors/Area3D" unique_id=325558414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.069608, 0.59036255, -5.075064)
+shape = SubResource("BoxShape3D_r5vv8")
+
+[connection signal="body_entered" from="Doors/Area3D" to="Doors/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Area3D" to="Doors/Area3D" method="_on_body_exited"]

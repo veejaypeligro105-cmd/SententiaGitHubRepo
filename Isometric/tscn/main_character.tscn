@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://k81c6v8uiqva"]
+
+[ext_resource type="Texture2D" uid="uid://e80go85o4jem" path="res://Character Sprites/The Male adventurer - Free/The Male adventurer - Free/Idle/idle.png" id="1_0eyao"]
+[ext_resource type="Script" uid="uid://3snmqk3bbf7r" path="res://Scenes/animated_sprite_2d.gd" id="2_11o2n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_11o2n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auhcp"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_keg3j"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlild"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6spo"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsers"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fj1i"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_024ki"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esnnb"]
+atlas = ExtResource("1_0eyao")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2o0tg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auhcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_keg3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlild")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6spo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsers")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fj1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_024ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esnnb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Main Character" type="Node2D" unique_id=1442510702]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=459829061]
+motion_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1348522400]
+shape = SubResource("CapsuleShape2D_11o2n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=2095806537]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_2o0tg")
+animation = &"Idle"
+script = ExtResource("2_11o2n")

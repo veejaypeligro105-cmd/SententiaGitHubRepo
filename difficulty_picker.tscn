@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://c1hwmqtt7ywbg"]
+
+[ext_resource type="Script" uid="uid://dkb7m3lkdbufx" path="res://difficulty_picker.gd" id="1_kikf0"]
+[ext_resource type="Texture2D" uid="uid://vdi7q6h8qiva" path="res://Logo and Main Menu scene/MainMenu Background.png" id="2_daffe"]
+
+[node name="DifficultyPicker" type="Control" unique_id=1152950650]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kikf0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=862811293]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 2297.0
+offset_bottom = 1288.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_daffe")
+
+[node name="Panel" type="Panel" parent="TextureRect" unique_id=823292552]
+layout_mode = 0
+offset_left = -10.0
+offset_right = 2294.0
+offset_bottom = 1306.0
+
+[node name="Title" type="Label" parent="." unique_id=452388426]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 144.0
+offset_right = 835.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 50
+text = "Pick your Difficulty"
+
+[node name="Easy" type="Button" parent="." unique_id=1858646322]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 259.0
+offset_right = 660.0
+offset_bottom = 313.0
+text = "Easy"
+
+[node name="Normal" type="Button" parent="." unique_id=57883041]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 332.0
+offset_right = 660.0
+offset_bottom = 386.0
+text = "Normal"
+
+[node name="Hard" type="Button" parent="." unique_id=990205503]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 410.0
+offset_right = 663.0
+offset_bottom = 464.0
+text = "Hard"
+
+[node name="Continue" type="Button" parent="." unique_id=403315223]
+layout_mode = 0
+offset_left = 967.0
+offset_top = 559.0
+offset_right = 1121.0
+offset_bottom = 613.0
+text = "Continue"

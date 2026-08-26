@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://pjhilddbm3aw"]
+
+[ext_resource type="PackedScene" uid="uid://cd76butibxcge" path="res://AceGameManager.tscn" id="1_jdbtv"]
+[ext_resource type="PackedScene" uid="uid://clr8jy8dcf4bo" path="res://logic_engine.tscn" id="2_2a8vl"]
+[ext_resource type="Script" uid="uid://21iq7x6rkv7i" path="res://TutorialCombatScene/TutorialCombatManager.gd" id="2_des1x"]
+[ext_resource type="PackedScene" uid="uid://j5k2l3hf7oig" path="res://AceCombatScene.tscn" id="3_43h5n"]
+[ext_resource type="Script" uid="uid://bp0lsky4qv6fc" path="res://TutorialCombatScene/tutorial_overlay.gd" id="5_3mobm"]
+
+[node name="TutorialMainCombatScene" type="Node" unique_id=351313384]
+
+[node name="SAceGameManager" parent="." unique_id=1575394475 instance=ExtResource("1_jdbtv")]
+script = ExtResource("2_des1x")
+
+[node name="LogicEngine" parent="." unique_id=1802617622 instance=ExtResource("2_2a8vl")]
+
+[node name="InGame" parent="." unique_id=1449282688 instance=ExtResource("3_43h5n")]
+accessibility_name = "InGame"
+
+[node name="TutorialOverlay" type="Control" parent="InGame" unique_id=1327220631]
+anchors_preset = 0
+offset_left = 358.0
+offset_top = 236.0
+offset_right = 404.0
+offset_bottom = 269.0
+accessibility_name = "TutorialOveray"
+script = ExtResource("5_3mobm")
+
+[node name="TutorialPopup" type="Panel" parent="InGame/TutorialOverlay" unique_id=590145552]
+layout_mode = 0
+offset_left = 514.0
+offset_top = -39.0
+offset_right = 781.0
+offset_bottom = 221.0
+accessibility_name = "TutorialPopup"
+
+[node name="TutorialLabel" type="Label" parent="InGame/TutorialOverlay/TutorialPopup" unique_id=1629245495]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 15.0
+offset_right = 251.0
+offset_bottom = 244.0
+accessibility_name = "TutorialLabel"
+autowrap_mode = 3
+
+[node name="TutorialNextBtn" type="Button" parent="InGame/TutorialOverlay/TutorialPopup" unique_id=1340852009]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 267.0
+offset_right = 266.0
+offset_bottom = 310.0
+accessibility_name = "Tutorialbtn"
+text = "Proceed"

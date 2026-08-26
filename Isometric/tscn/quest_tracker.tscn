@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dgwavjtveef57"]
+
+[ext_resource type="Script" uid="uid://dam8fognvfh6d" path="res://Isometric/tscn/quest_tracker.gd" id="1_lhtvh"]
+
+[node name="QuestTracker" type="Control" unique_id=1380934620]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 206.0
+offset_right = 179.0
+offset_bottom = 325.0
+script = ExtResource("1_lhtvh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=81655572]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Objectives List" type="VBoxContainer" parent="VBoxContainer" unique_id=1599496117]
+layout_mode = 2
+
+[node name="QuestTitle" type="Label" parent="VBoxContainer" unique_id=2023984213]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+vertical_alignment = 1
+uppercase = true

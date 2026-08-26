@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cec443g1bt10n"]
+
+[ext_resource type="Script" uid="uid://b1axk042qmiss" path="res://Login-Signup.gd" id="1_u2efq"]
+[ext_resource type="Texture2D" uid="uid://vdi7q6h8qiva" path="res://Logo and Main Menu scene/MainMenu Background.png" id="2_t8uqq"]
+
+[node name="LoginScene" type="Control" unique_id=1537586752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u2efq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1409628521]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 2297.0
+offset_bottom = 1288.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_t8uqq")
+
+[node name="Panel" type="Panel" parent="." unique_id=380296570]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="EmailInput" type="LineEdit" parent="Panel" unique_id=763215078]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 212.0
+offset_right = 797.0
+offset_bottom = 265.0
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Email"
+
+[node name="PasswordInput" type="LineEdit" parent="Panel" unique_id=662466414]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 284.0
+offset_right = 802.0
+offset_bottom = 345.0
+placeholder_text = "Password"
+secret = true
+
+[node name="SignupButton" type="Button" parent="Panel" unique_id=747275129]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 373.0
+offset_right = 575.0
+offset_bottom = 416.0
+theme_override_font_sizes/font_size = 25
+text = "Signup
+"
+
+[node name="LoginButton" type="Button" parent="Panel" unique_id=2109014358]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 375.0
+offset_right = 751.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 25
+text = "Login
+"
+
+[node name="Statuslbl" type="Label" parent="Panel" unique_id=579184572]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 131.0
+offset_right = 696.0
+offset_bottom = 185.0
+
+[connection signal="pressed" from="Panel/SignupButton" to="." method="_on_signup_button_pressed"]
+[connection signal="pressed" from="Panel/LoginButton" to="." method="_on_login_button_pressed"]

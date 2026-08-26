@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dhtvrdn5d5yr4"]
+
+[ext_resource type="Texture2D" uid="uid://c8fotcfgt51nb" path="res://ItemsSententia/Coffee.png" id="1_dq0dk"]
+[ext_resource type="Script" uid="uid://nv4xqm6xlcbe" path="res://ItemsScript/ItemData.gd" id="2_jr3h1"]
+
+[resource]
+script = ExtResource("2_jr3h1")
+item_name = "Coffee"
+description = "Oh... sweet dirty beans. 50+HP"
+heal_amount = 50
+icon = ExtResource("1_dq0dk")

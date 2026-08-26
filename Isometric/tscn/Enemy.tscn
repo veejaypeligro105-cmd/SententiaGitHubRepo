@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b28oe05dihnrq"]
+
+[ext_resource type="Script" uid="uid://ipma1pywfsyl" path="res://EnemyScript/enemyNPC.gd" id="1_8nvtl"]
+[ext_resource type="Script" uid="uid://nv4xqm6xlcbe" path="res://ItemsScript/ItemData.gd" id="2_gtsj6"]
+[ext_resource type="Script" uid="uid://bn1tigns082x0" path="res://EnemyScript/EnemyData.gd" id="5_memw4"]
+[ext_resource type="Texture2D" uid="uid://bec4lspgnnq36" path="res://Normal Enemy NPCS/111.png" id="6_17svh"]
+
+[sub_resource type="Resource" id="Resource_8nyh7"]
+script = ExtResource("5_memw4")
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7a2n"]
+atlas = ExtResource("6_17svh")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sr23"]
+atlas = ExtResource("6_17svh")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xwrgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7a2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sr23")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jx1qd"]
+radius = 6.247986
+height = 18.432007
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xe4on"]
+radius = 15.247986
+height = 30.495972
+
+[node name="TestEnemy" type="CharacterBody2D" unique_id=2135334260]
+z_index = 6
+y_sort_enabled = true
+script = ExtResource("1_8nvtl")
+enemy_data = SubResource("Resource_8nyh7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1497275640]
+texture_filter = 1
+position = Vector2(-0.24798584, -0.21600342)
+scale = Vector2(0.672, 0.672)
+sprite_frames = SubResource("SpriteFrames_xwrgg")
+animation = &"Idle"
+frame_progress = 0.8943217
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=250125562]
+z_index = 6
+position = Vector2(-0.24798584, -0.21600342)
+shape = SubResource("CapsuleShape2D_jx1qd")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1932256177]
+position = Vector2(0.75201416, -0.21600342)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1469946518]
+shape = SubResource("CapsuleShape2D_xe4on")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

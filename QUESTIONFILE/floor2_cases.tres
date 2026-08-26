@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="QuestionPool" format=3 uid="uid://dohv5d43poa4q"]
+
+[ext_resource type="Script" uid="uid://demvq0un1aumi" path="res://QUESTIONFILE/QuestionData.gd" id="1_pjpd1"]
+[ext_resource type="Script" uid="uid://cabe8i03o3v2l" path="res://QUESTIONFILE/QuestionPool.gd" id="2_7r3o4"]
+
+[sub_resource type="Resource" id="Resource_f6jdm"]
+script = ExtResource("1_pjpd1")
+statement_text = "P → Q, P, ∴ Q is an example of Modus Tollens."
+choices = Array[String](["Modus Tollens", "Modus Ponens", "Hypothetical Syllogism"])
+correct_choice = "Modus Ponens"
+
+[sub_resource type="Resource" id="Resource_6hudk"]
+script = ExtResource("1_pjpd1")
+statement_text = "In a categorical syllogism, there are usually three terms."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_p3r4r"]
+script = ExtResource("1_pjpd1")
+statement_text = "P ∨ Q, P, ∴ Q is always a valid disjunctive syllogism."
+choices = Array[String](["It is invalid", "It is Modus Ponens", "It is hypothetical reasoning"])
+correct_choice = "It is invalid"
+
+[sub_resource type="Resource" id="Resource_g3fm4"]
+script = ExtResource("1_pjpd1")
+statement_text = "A hypothetical syllogism follows the form: P → Q, Q → R, ∴ R → P."
+choices = Array[String](["If P then not Q", "If P then R", "If R then P"])
+correct_choice = "If P then R"
+
+[sub_resource type="Resource" id="Resource_o86d6"]
+script = ExtResource("1_pjpd1")
+statement_text = "Circular arguments repeat the conclusion as evidence."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_nqera"]
+script = ExtResource("1_pjpd1")
+statement_text = "\"All mammals are animals. Dogs are mammals. Therefore, dogs are animals.\" is a categorical syllogism."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_d4i2o"]
+script = ExtResource("1_pjpd1")
+statement_text = "A disjunctive argument uses only conjunctions such as P∧Q."
+choices = Array[String](["\"If-then\" only", "Questions only", "\"Either-or\" statements"])
+correct_choice = "\"Either-or\" statements"
+
+[sub_resource type="Resource" id="Resource_lnlfy"]
+script = ExtResource("1_pjpd1")
+statement_text = "The symbolic form P ∧ Q is called a conditional statement."
+choices = Array[String](["Conjunction statement", "Conditional statement", "Biconditional statement"])
+correct_choice = "Conjunction statement"
+
+[sub_resource type="Resource" id="Resource_7vsm7"]
+script = ExtResource("1_pjpd1")
+statement_text = "A fallacy is a mistake in reasoning."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_ehlg0"]
+script = ExtResource("1_pjpd1")
+statement_text = "Argument structures are patterns used to organize reasoning."
+is_true = true
+
+[resource]
+script = ExtResource("2_7r3o4")
+pool_id = "Floor2"
+cases = Array[ExtResource("1_pjpd1")]([SubResource("Resource_f6jdm"), SubResource("Resource_6hudk"), SubResource("Resource_p3r4r"), SubResource("Resource_g3fm4"), SubResource("Resource_o86d6"), SubResource("Resource_nqera"), SubResource("Resource_d4i2o"), SubResource("Resource_lnlfy"), SubResource("Resource_7vsm7"), SubResource("Resource_ehlg0")])

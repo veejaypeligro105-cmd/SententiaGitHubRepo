@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bnqwvpqpfwr7j"]
+
+[ext_resource type="Texture2D" uid="uid://bhu2opb28bj5d" path="res://ItemsSententia/candy.png" id="1_175y5"]
+[ext_resource type="Script" uid="uid://nv4xqm6xlcbe" path="res://ItemsScript/ItemData.gd" id="2_175y5"]
+
+[resource]
+script = ExtResource("2_175y5")
+item_name = "Candy"
+description = "Mint Flavor... Yum. 10+HP"
+heal_amount = 10
+icon = ExtResource("1_175y5")

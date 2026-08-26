@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cira4p7hbxn7x"]
+
+[ext_resource type="Script" uid="uid://5hyfhnmw42qp" path="res://dmgpopup.gd" id="1_djs3g"]
+
+[node name="Dmgpopup" type="Label" unique_id=1466481737]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_djs3g")

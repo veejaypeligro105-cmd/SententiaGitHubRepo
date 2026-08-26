@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://mh8cl8r0rqgs"]
+
+[ext_resource type="PackedScene" uid="uid://bjl0h70yvc1kv" path="res://InsideSchool/NewSchoolLobby.glb" id="1_2r3qe"]
+
+[node name="NewSchoolLobby" unique_id=2018837473 instance=ExtResource("1_2r3qe")]

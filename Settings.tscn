@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://12p4w4omp2qe"]
+
+[ext_resource type="Script" uid="uid://8c2m77avjorb" path="res://SettingsScript.gd" id="1_bvb5x"]
+
+[node name="Control" type="Control" unique_id=1311159044]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bvb5x")
+
+[node name="Panel" type="Panel" parent="." unique_id=1796054725]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.750002
+anchor_bottom = 16.275002
+offset_right = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=236709779]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 645.0
+
+[node name="Audio" type="Label" parent="Panel/VBoxContainer" unique_id=1379646718]
+layout_mode = 2
+text = "Audio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolume" type="HBoxContainer" parent="Panel" unique_id=1085301026]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 1172.0
+offset_bottom = 135.0
+alignment = 1
+
+[node name="MasterVolume" type="Label" parent="Panel/MasterVolume" unique_id=1834124147]
+layout_mode = 2
+text = "MasterVolume
+"
+
+[node name="HSlider" type="HSlider" parent="Panel/MasterVolume" unique_id=1096004815]
+layout_mode = 2
+
+[node name="SFXVolume" type="HBoxContainer" parent="Panel" unique_id=1573234011]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 120.0
+offset_right = 1157.0
+offset_bottom = 200.0
+alignment = 1
+
+[node name="Sfx Volume" type="Label" parent="Panel/SFXVolume" unique_id=1663575331]
+layout_mode = 2
+text = "SFX Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Panel/SFXVolume" unique_id=1132527176]
+layout_mode = 2
+
+[node name="Resolution" type="HBoxContainer" parent="Panel" unique_id=629164278]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 211.0
+offset_right = 1149.0
+offset_bottom = 380.0
+alignment = 1
+
+[node name="Resolution" type="Label" parent="Panel/Resolution" unique_id=1339075740]
+layout_mode = 2
+text = "Resolution"
+
+[node name="Back" type="Button" parent="." unique_id=102239652]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 577.0
+offset_right = 1119.0
+offset_bottom = 628.0
+text = "Back"
+
+[node name="Button" type="Button" parent="." unique_id=1990802359]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 574.0
+offset_right = 985.0
+offset_bottom = 630.0
+text = "Apply
+"
+
+[connection signal="pressed" from="Back" to="." method="_on_button_pressed"]

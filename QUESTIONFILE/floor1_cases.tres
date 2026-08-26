@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="QuestionPool" format=3 uid="uid://d08ep03fvjvja"]
+
+[ext_resource type="Script" uid="uid://demvq0un1aumi" path="res://QUESTIONFILE/QuestionData.gd" id="1_h2f8d"]
+[ext_resource type="Script" uid="uid://cabe8i03o3v2l" path="res://QUESTIONFILE/QuestionPool.gd" id="2_vwxwl"]
+
+[sub_resource type="Resource" id="Resource_y4obq"]
+script = ExtResource("1_h2f8d")
+statement_text = "If P → Q and P are true, then Q must also be true in a valid argument."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_m0yv8"]
+script = ExtResource("1_h2f8d")
+statement_text = "An argument is sound if it is valid and all premises are true."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_qj4u1"]
+script = ExtResource("1_h2f8d")
+statement_text = "A weak argument always guarantees that the conclusion is certainly true."
+choices = Array[String](["It has little support for the conclusion", "It has many premises", "It contains no evidence"])
+correct_choice = "It has little support for the conclusion"
+
+[sub_resource type="Resource" id="Resource_uljnn"]
+script = ExtResource("1_h2f8d")
+statement_text = "Deductive arguments are evaluated based on validity."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_ec8ix"]
+script = ExtResource("1_h2f8d")
+statement_text = "Inductive arguments always provide absolute certainty like deductive arguments."
+choices = Array[String](["Possibility only", "Absolute certainty", "Mathematical proof"])
+correct_choice = "Possibility only"
+
+[sub_resource type="Resource" id="Resource_l8ugr"]
+script = ExtResource("1_h2f8d")
+statement_text = "A cogent argument is a strong inductive argument with true premises."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_bsc04"]
+script = ExtResource("1_h2f8d")
+statement_text = "Invalid arguments can never produce a true conclusion under any condition."
+choices = Array[String](["They may still have true conclusions", "They are always sound", "They contain no premises"])
+correct_choice = "They may still have true conclusions"
+
+[sub_resource type="Resource" id="Resource_6mxc1"]
+script = ExtResource("1_h2f8d")
+statement_text = "A conclusion is the statement supported by the premises."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_dty1j"]
+script = ExtResource("1_h2f8d")
+statement_text = "Premises are reasons used to support a conclusion."
+is_true = true
+
+[sub_resource type="Resource" id="Resource_op6rj"]
+script = ExtResource("1_h2f8d")
+statement_text = "Every valid argument is automatically sound regardless of whether the premises are true."
+choices = Array[String](["Impossible", "Only if there is no conclusion", "If one or more premises are false"])
+correct_choice = "If one or more premises are false"
+
+[resource]
+script = ExtResource("2_vwxwl")
+pool_id = "Floor1"
+cases = Array[ExtResource("1_h2f8d")]([SubResource("Resource_y4obq"), SubResource("Resource_m0yv8"), SubResource("Resource_qj4u1"), SubResource("Resource_uljnn"), SubResource("Resource_ec8ix"), SubResource("Resource_l8ugr"), SubResource("Resource_bsc04"), SubResource("Resource_6mxc1"), SubResource("Resource_dty1j"), SubResource("Resource_op6rj")])

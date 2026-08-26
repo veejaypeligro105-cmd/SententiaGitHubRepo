@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://x7dptq70mnqv"]
+
+[ext_resource type="Script" uid="uid://mckxsmiqos3w" path="res://startup_menu.gd" id="1_kvd63"]
+[ext_resource type="Texture2D" uid="uid://vdi7q6h8qiva" path="res://Logo and Main Menu scene/MainMenu Background.png" id="2_bnl4a"]
+
+[node name="Startup-Menu" type="Control" unique_id=578456345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kvd63")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1386098923]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 2297.0
+offset_bottom = 1288.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bnl4a")
+
+[node name="Title" type="Label" parent="." unique_id=246079774]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 38.0
+offset_right = 711.0
+offset_bottom = 117.0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 58
+text = "
+"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Title" unique_id=1980124567]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 218.0
+offset_right = 240.0
+offset_bottom = 218.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Title/CenterContainer" unique_id=1737942979]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="Title/CenterContainer/VBoxContainer" unique_id=904273924]
+layout_mode = 2
+text = "Start
+"
+
+[node name="Load" type="Button" parent="Title/CenterContainer/VBoxContainer" unique_id=1312111077]
+layout_mode = 2
+text = "Load(Not Implemented)
+"
+
+[node name="Settings" type="Button" parent="Title/CenterContainer/VBoxContainer" unique_id=1123747863]
+layout_mode = 2
+text = "Settings(Not Implemented)
+"
+
+[node name="Achivements" type="Button" parent="Title/CenterContainer/VBoxContainer" unique_id=1808128203]
+layout_mode = 2
+text = "Achievements(Not Implemented)"
+
+[node name="Quit" type="Button" parent="Title/CenterContainer/VBoxContainer" unique_id=902283667]
+layout_mode = 2
+text = "Quit
+"
+
+[node name="Tutorial" type="Button" parent="." unique_id=1898383912]
+layout_mode = 0
+offset_left = 979.0
+offset_top = 582.0
+offset_right = 1135.0
+offset_bottom = 626.0
+text = "Tutorial(temporary)"
+
+[connection signal="pressed" from="Title/CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Title/CenterContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Title/CenterContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Title/CenterContainer/VBoxContainer/Achivements" to="." method="_on_achivements_pressed"]
+[connection signal="pressed" from="Title/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]

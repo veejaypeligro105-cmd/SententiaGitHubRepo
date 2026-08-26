@@ -1,0 +1,30 @@
+CREATE TABLE questions(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	type TEXT,
+	question TEXT,
+	choice1 TEXT,
+	choice2 TEXT,
+	choice3 TEXT,
+	correct_card TEXT
+);
+
+
+INSERT INTO questions (type, question, choice1, choice2, choice3, correct_card) 
+VALUES
+("Negation", "What is the negation of 'It is raining'?", 
+"It is not raining", 
+"It is raining and not raining", 
+"It might be raining", 
+"Archer"),
+
+("Conjunction", "What does p ∧ q mean?", 
+"p or q", 
+"p and q", 
+"not p", 
+"Knight"),
+
+("Disjunction", "What does p ∨ q mean?", 
+"p and q", 
+"either p or q (or both)", 
+"not q", 
+"Demon");

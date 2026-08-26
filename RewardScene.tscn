@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://dmfqxner0lfgu"]
+
+[ext_resource type="Script" uid="uid://c2a6twrkneh1v" path="res://RewardScene.gd" id="1_lby3r"]
+
+[node name="Control" type="Control" unique_id=1873597811]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lby3r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1278185420]
+
+[node name="ColoRect" type="ColorRect" parent="CanvasLayer" unique_id=408574142]
+visible = false
+offset_left = 372.0
+offset_top = 141.0
+offset_right = 824.0
+offset_bottom = 541.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=422947993]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LootContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=1492300192]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 311.0
+offset_right = 995.0
+offset_bottom = 483.0
+
+[node name="Goldlabel" type="Label" parent="CanvasLayer/Panel" unique_id=550474000]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 237.0
+offset_right = 928.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[node name="Xplabel" type="Label" parent="CanvasLayer/Panel" unique_id=1572690858]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 236.0
+offset_right = 329.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 20
+text = "xp
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=255497336]
+visible = false
+layout_mode = 0
+offset_left = 189.0
+offset_top = 143.0
+offset_right = 1018.0
+offset_bottom = 520.0
+
+[node name="Titlelabel" type="Label" parent="CanvasLayer/Panel" unique_id=1624093508]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 70.0
+offset_right = 666.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 20
+text = "Enemy Defeated"
+
+[node name="Nextbutton" type="Button" parent="CanvasLayer/Panel" unique_id=561026425]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 574.0
+offset_right = 1116.0
+offset_bottom = 611.0
+text = "Next"
+
+[node name="xpbar" type="ProgressBar" parent="CanvasLayer/Panel" unique_id=654508471]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 134.0
+offset_right = 817.0
+offset_bottom = 202.0
+
+[connection signal="pressed" from="CanvasLayer/Panel/Nextbutton" to="." method="_on_nextbutton_pressed"]

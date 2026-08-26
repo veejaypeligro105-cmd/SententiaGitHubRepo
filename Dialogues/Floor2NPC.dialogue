@@ -1,0 +1,96 @@
+~ start
+Darwin: These statements look different… but they behave the same.
+Logos: That is because truth can be rewritten without changing its meaning.
+
+#De Morgan's Law
+Logos: When negation is applied to a group, it changes both the operator and the statements.
+Logos: The negation of P ∧ Q becomes ¬P ∨ ¬Q.
+Logos: The negation of P ∨ Q becomes ¬P ∧ ¬Q.
+Darwin: So I flip AND to OR… and negate both.
+Logos: Yes.
+
+#Double Negation
+Logos: Two negations cancel each other. ¬(¬P) is simply P.
+
+#Conditional Rewrite
+Logos: A conditional can be rewritten. P → Q is equivalent to ¬P ∨ Q.”
+
+#Conditional Variations (IMPORTANT TRAPS)
+Logos: The converse, Q → P, is not equivalent.
+Logos: The inverse, ¬P → ¬Q, is also not equivalent.
+Logos: But the contrapositive, ¬Q → ¬P, is always equivalent.
+
+Darwin: So only one transformation is actually safe.
+Logos: Yes. The rest are common mistakes.
+
+#Evaluation
+Logos: Answer these before you proceed.
+Logos: You must prove understanding.
+
+~ question_1
+Logos: First: Apply De Morgan’s Law to ¬(P ∧ Q).
+- A. ¬P ∧ ¬Q
+	Logos: No. You failed to distribute negation properly.
+	=> question_1
+
+- B. ¬P ∨ ¬Q
+	Logos: Correct. AND becomes OR under negation.
+	~ question_2
+	Logos: Second: What is ¬(¬P)?
+	- A. ¬P
+		Logos: No. You are stacking negations incorrectly.
+		=> question_2
+
+	- B. P ∨ P
+		Logos: No. You are stacking negations incorrectly.
+		=> question_2
+
+	- C. P
+		Logos: Correct. Double negation cancels.
+		~ question_3
+		Logos: Third: Rewrite P → Q.
+		- A. P ∧ Q
+			Logos: No. You are misrepresenting implication.
+			=> question_3
+
+		- B. ¬P ∨ Q 
+			Logos: Correct. Implication is a disjunction.
+			~ question_4
+			Logos: Fourth: Which is always equivalent: converse, inverse, or contrapositive?
+			- A. Converse
+				Logos: No. The others can break logical equivalence.
+				=> question_4
+
+			- B. Inverse
+				Logos: No. The others can break logical equivalence.
+				=> question_4
+
+			- C. Contrapositive 
+				Logos: Correct. Only contrapositive preserves truth.
+				Logos: You may now proceed.
+				=> END
+
+			- D. None
+				Logos: No. The others can break logical equivalence.
+				=> question_4
+
+		- C. ¬P ∧ Q
+			Logos: No. You are misrepresenting implication.
+			=> question_3
+
+		- D. Q → P
+			Logos: No. You are misrepresenting implication.
+			=> question_3
+
+	- D. False always
+		Logos: No. You are stacking negations incorrectly.
+		=> question_2
+
+- C. P ∨ Q
+	Logos: No. You failed to distribute negation properly.
+	=> question_1
+
+- D. P ∧ Q
+	Logos: No. You failed to distribute negation properly.
+	=> question_1
+=> END

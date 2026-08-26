@@ -1,0 +1,397 @@
+[gd_scene format=3 uid="uid://ddt3hqwcrbrrv"]
+
+[ext_resource type="PackedScene" uid="uid://b54m2nm1exjb5" path="res://NewSchool/SchoolExploration.glb" id="1_a07rc"]
+[ext_resource type="PackedScene" uid="uid://5xrq7yv6yw5o" path="res://Scenes/player.tscn" id="2_dtckf"]
+[ext_resource type="PackedScene" uid="uid://bfyajl6rkbbed" path="res://pause_menu_ig.tscn" id="3_6tkqa"]
+[ext_resource type="PackedScene" uid="uid://cv004bqpth70a" path="res://Scenes/NPC/npc.tscn" id="4_5mh8k"]
+[ext_resource type="Resource" uid="uid://dhtvrdn5d5yr4" path="res://ItemsResource/Coffee.tres" id="4_mdia2"]
+[ext_resource type="Script" uid="uid://nv4xqm6xlcbe" path="res://ItemsScript/ItemData.gd" id="4_rrb0r"]
+[ext_resource type="Resource" uid="uid://bnqwvpqpfwr7j" path="res://ItemsResource/CandyHp.tres" id="5_678g3"]
+[ext_resource type="Script" uid="uid://br7vkwkq6u31y" path="res://new-newNewSchool/static_body_3d.gd" id="5_mv5cl"]
+[ext_resource type="Texture2D" uid="uid://5siup0128u58" path="res://Player - Character Sprites/NPCEnemyIdle.png" id="5_tr5nv"]
+[ext_resource type="Script" uid="uid://dvesiggnvgva7" path="res://Testingcombat.gd" id="6_cvea5"]
+[ext_resource type="Script" uid="uid://cgwlu7jhgaxqi" path="res://new-newNewSchool/area_3d.gd" id="7_lixa4"]
+[ext_resource type="Script" uid="uid://dxpeub6504br6" path="res://EnemyScript/NpcBattle.gd" id="8_kuta7"]
+[ext_resource type="Script" uid="uid://b3785u02v1lyg" path="res://Scenes/2Dhp_ui.gd" id="8_lixa4"]
+[ext_resource type="Script" uid="uid://ipma1pywfsyl" path="res://EnemyScript/enemyNPC.gd" id="9_k0cjc"]
+[ext_resource type="Script" uid="uid://bn1tigns082x0" path="res://EnemyScript/EnemyData.gd" id="9_urmq6"]
+[ext_resource type="PackedScene" uid="uid://dep3b3jvfymoc" path="res://CoinIcon.tscn" id="15_rrb0r"]
+[ext_resource type="Texture2D" uid="uid://lyjkqqytltsh" path="res://free-sky-with-clouds-background-pixel-art-set/1-sheet.png" id="16_rrb0r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kckx4"]
+size = Vector3(28.001709, 0.1602478, 17.089355)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kuta7"]
+load_path = "res://.godot/imported/NPCEnemyAttack3.png-10e4600ebb41db8cd75c0ff3e5ebf902.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuta7"]
+atlas = SubResource("CompressedTexture2D_kuta7")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrb0r"]
+atlas = SubResource("CompressedTexture2D_kuta7")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rrb0r"]
+load_path = "res://.godot/imported/NPCEnemyHurt3.png-bc2c1cf07f69bb64f019d190f25fd94e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdia2"]
+atlas = SubResource("CompressedTexture2D_rrb0r")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_678g3"]
+atlas = SubResource("CompressedTexture2D_rrb0r")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xahel"]
+atlas = SubResource("CompressedTexture2D_rrb0r")
+region = Rect2(64, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbm3g"]
+atlas = SubResource("CompressedTexture2D_rrb0r")
+region = Rect2(96, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgu28"]
+atlas = SubResource("CompressedTexture2D_rrb0r")
+region = Rect2(128, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8tb2"]
+atlas = SubResource("CompressedTexture2D_rrb0r")
+region = Rect2(160, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71t8t"]
+atlas = SubResource("CompressedTexture2D_rrb0r")
+region = Rect2(192, 0, 32, 44)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mdia2"]
+load_path = "res://.godot/imported/NPCEnemyBattleIdle3.png-2a503a6417212d5b67757fcf91279ec3.s3tc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd6ip"]
+atlas = SubResource("CompressedTexture2D_mdia2")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny5tn"]
+atlas = SubResource("CompressedTexture2D_mdia2")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rrb0r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuta7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrb0r")
+}],
+"loop": false,
+"name": &"Battle-Npc-Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdia2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_678g3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xahel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbm3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgu28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8tb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71t8t")
+}],
+"loop": false,
+"name": &"Battle-Npc-Hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sd6ip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny5tn")
+}],
+"loop": true,
+"name": &"Battle-Npc-Idle",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqv7n"]
+atlas = SubResource("CompressedTexture2D_mdia2")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jeax"]
+atlas = SubResource("CompressedTexture2D_mdia2")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mdia2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqv7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jeax")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_678g3"]
+script = ExtResource("9_urmq6")
+sprite_3d_frames = SubResource("SpriteFrames_mdia2")
+sprite_2d_frames = SubResource("SpriteFrames_rrb0r")
+anim_prefix = "F1"
+enemy_id = "001"
+enemy_name = "Female Kid"
+item_drop = Array[ExtResource("4_rrb0r")]([ExtResource("5_678g3"), ExtResource("4_mdia2")])
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3dsn"]
+atlas = SubResource("CompressedTexture2D_mdia2")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6quie"]
+atlas = SubResource("CompressedTexture2D_mdia2")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xahel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3dsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6quie")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_urmq6"]
+radius = 0.1763641
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_urmq6"]
+radius = 0.33813477
+height = 0.67626953
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq7bj"]
+atlas = ExtResource("5_tr5nv")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itulk"]
+atlas = ExtResource("5_tr5nv")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0cjc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq7bj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itulk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_urmq6"]
+size = Vector3(0.37054443, 0.61743164, 0.3170166)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dixss"]
+radius = 0.39111328
+height = 1.6318359
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o3dsn"]
+size = Vector3(3.5963135, 1.0703125, 0.5611572)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wv736"]
+size = Vector3(7.535768, 1.7536926, 0.3542328)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6quie"]
+size = Vector3(1.2539063, 0.64160156, 0.55355835)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a07rc"]
+panorama = ExtResource("16_rrb0r")
+
+[sub_resource type="Sky" id="Sky_kckx4"]
+sky_material = SubResource("PanoramaSkyMaterial_a07rc")
+
+[sub_resource type="Environment" id="Environment_m15u2"]
+background_mode = 2
+sky = SubResource("Sky_kckx4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q04f3"]
+size = Vector3(0.52093506, 0.26831055, 0.2316742)
+
+[node name="Node3D" type="Node3D" unique_id=2094584077]
+
+[node name="SchoolExploration" parent="." unique_id=1176784006 instance=ExtResource("1_a07rc")]
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, -0.15449679, 0, -0.38842654)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SchoolExploration" unique_id=1442303401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037606835, 0, 3.0676756)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SchoolExploration/StaticBody3D" unique_id=925940559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.720342, -0.058456533, 2.5719337)
+shape = SubResource("BoxShape3D_kckx4")
+
+[node name="Player" parent="SchoolExploration" unique_id=1772266486 instance=ExtResource("2_dtckf")]
+transform = Transform3D(2.8650014, 0, 0, 0, 2.855558, -0.23241144, 0, 0.23241144, 2.855558, 0, -0.074180305, 10.104731)
+
+[node name="EnemyNPC" type="CharacterBody3D" parent="SchoolExploration" unique_id=857896685 groups=["npc"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95298445, 0.05545377, 5.688207)
+script = ExtResource("9_k0cjc")
+enemy_data = SubResource("Resource_678g3")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="SchoolExploration/EnemyNPC" unique_id=1252109350]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.43654847, 0.19415027, 2.2109814)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_xahel")
+animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SchoolExploration/EnemyNPC" unique_id=2048013334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42646718, 0.22970337, 2.2138329)
+shape = SubResource("SphereShape3D_urmq6")
+
+[node name="Area3D" type="Area3D" parent="SchoolExploration/EnemyNPC" unique_id=2094803674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3555522, 0.17523485, 2.2546005)
+script = ExtResource("8_kuta7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SchoolExploration/EnemyNPC/Area3D" unique_id=1860139284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.060589075, 0.019284844, 0)
+shape = SubResource("CapsuleShape3D_urmq6")
+
+[node name="PauseMenu" type="CanvasLayer" parent="SchoolExploration" unique_id=1167803584]
+
+[node name="PauseMenuIG" parent="SchoolExploration/PauseMenu" unique_id=1455197487 instance=ExtResource("3_6tkqa")]
+
+[node name="NPC" parent="SchoolExploration" unique_id=1551344911 instance=ExtResource("4_5mh8k")]
+transform = Transform3D(-1.538145, 0.076478995, 0.12363697, 0.012000728, 1.3762468, -0.70201594, -0.1448831, -0.6979409, -1.3707348, -1.1521349, 0.15167499, 9.213166)
+
+[node name="Battle System" type="CharacterBody3D" parent="SchoolExploration" unique_id=297463166]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.32906032, 1.1984255, 6.9587936)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="SchoolExploration/Battle System" unique_id=199294679]
+transform = Transform3D(3.0000005, 0, 0, 0, 3.0000005, 0, 0, 0, 3.0000005, 2.3839626, -1.9381876, 3.8379002)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_k0cjc")
+
+[node name="CombatTesting" type="Area3D" parent="SchoolExploration/Battle System" unique_id=449966272]
+transform = Transform3D(-1.2261044e-07, 0, 2.805, 0, 2.805, 0, -2.805, 0, -1.2261044e-07, 1.8762076, -2.0693102, 5.834299)
+script = ExtResource("6_cvea5")
+
+[node name="Collision for the interactable" type="CollisionShape3D" parent="SchoolExploration/Battle System/CombatTesting" unique_id=1498675399]
+transform = Transform3D(1.0000001, 0, 1.1368684e-13, 0, 1.0000001, 0, -1.1368684e-13, 0, 1.0000001, 0.82824135, -0.01332593, 0.2105909)
+shape = SubResource("BoxShape3D_urmq6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SchoolExploration/Battle System" unique_id=2134357983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4731364, -2.0139945, 3.7752476)
+shape = SubResource("CapsuleShape3D_dixss")
+
+[node name="Entrance School" type="CanvasLayer" parent="SchoolExploration" unique_id=1374368041]
+
+[node name="Area3D" type="Area3D" parent="SchoolExploration/Entrance School" unique_id=1295310076]
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, -0.15449679, 0, 0.59188735)
+script = ExtResource("7_lixa4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SchoolExploration/Entrance School/Area3D" unique_id=805245491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28497362, 0.5807558, -0.55049515)
+shape = SubResource("BoxShape3D_o3dsn")
+
+[node name="Ui" type="CanvasLayer" parent="SchoolExploration" unique_id=2026525208]
+
+[node name="Hp_ui" type="Control" parent="SchoolExploration/Ui" unique_id=647534961]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 42.0
+offset_top = 577.0
+offset_right = 406.0
+offset_bottom = 661.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("8_lixa4")
+
+[node name="HpBar" type="ProgressBar" parent="SchoolExploration/Ui/Hp_ui" unique_id=411979693]
+modulate = Color(0, 0.79, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.21400002
+anchor_right = 1.0
+anchor_bottom = 1.179
+offset_left = 4.0
+offset_top = -7.9760017
+offset_bottom = -7.996025
+value = 100.0
+show_percentage = false
+
+[node name="HpCount" type="Label" parent="SchoolExploration/Ui/Hp_ui" unique_id=587775298]
+layout_mode = 0
+offset_left = 34.0
+offset_top = -16.0
+offset_right = 244.0
+offset_bottom = 70.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Panel" parent="SchoolExploration/Ui" unique_id=238973427 instance=ExtResource("15_rrb0r")]
+offset_left = 960.0
+offset_top = 15.0
+offset_right = 1141.0
+offset_bottom = 71.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1455738552]
+transform = Transform3D(1, 0, 0, 0, 0.7930345, 0.60917675, 0, -0.60917675, 0.7930345, 0, 4.665318, 4.34464)
+light_energy = 1.43
+light_indirect_energy = 1.173
+shadow_enabled = true
+sky_mode = 1
+
+[node name="Collision" type="CanvasLayer" parent="." unique_id=1233596670]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collision" unique_id=738296033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5657978)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision/StaticBody3D" unique_id=266977113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14516616, 0.3768463, -0.040394306)
+shape = SubResource("BoxShape3D_wv736")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Collision/StaticBody3D" unique_id=495549788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12695313, 0.17919922, -2.3827875)
+shape = SubResource("BoxShape3D_6quie")
+debug_color = Color(1, 0, 0.5333333, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1420369457]
+environment = SubResource("Environment_m15u2")
+
+[node name="Exit" type="CanvasLayer" parent="." unique_id=249427629]
+
+[node name="StaticBody3D" type="Area3D" parent="Exit" unique_id=1924396026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.179595)
+script = ExtResource("5_mv5cl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exit/StaticBody3D" unique_id=929429869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19320679, 0.083862305, 0.11746979)
+shape = SubResource("BoxShape3D_q04f3")
+
+[connection signal="body_entered" from="SchoolExploration/EnemyNPC/Area3D" to="SchoolExploration/EnemyNPC/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="SchoolExploration/EnemyNPC/Area3D" to="SchoolExploration/EnemyNPC/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="SchoolExploration/Battle System/CombatTesting" to="SchoolExploration/Battle System/CombatTesting" method="_on_body_entered"]
+[connection signal="body_exited" from="SchoolExploration/Battle System/CombatTesting" to="SchoolExploration/Battle System/CombatTesting" method="_on_body_exited"]
+[connection signal="body_entered" from="SchoolExploration/Entrance School/Area3D" to="SchoolExploration/Entrance School/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="SchoolExploration/Entrance School/Area3D" to="SchoolExploration/Entrance School/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="Exit/StaticBody3D" to="Exit/StaticBody3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Exit/StaticBody3D" to="Exit/StaticBody3D" method="_on_body_exited"]

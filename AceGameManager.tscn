@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cd76butibxcge"]
+
+[ext_resource type="Script" uid="uid://tumadq6ctwpi" path="res://SAceGameManagerScript.gd" id="1_cy2bm"]
+
+[node name="SAceGameManager" type="Node" unique_id=1575394475]
+script = ExtResource("1_cy2bm")
+
+[node name="Dialogue" type="Control" parent="." unique_id=1400562695]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1142.0
+offset_bottom = 144.0
+
+[node name="Enemy" type="Node" parent="." unique_id=1079806301]
+
+[node name="Player" type="Node" parent="." unique_id=888508133]

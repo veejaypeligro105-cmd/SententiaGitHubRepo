@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cluam0pdalexj"]
+
+[ext_resource type="Script" uid="uid://ccntp8sad5y0a" path="res://NEW SCENES/MAINSCENE.gd" id="1_iypxs"]
+[ext_resource type="PackedScene" uid="uid://b2ixaf1i6mvh2" path="res://Scenes/2_dpausemenu_ig.tscn" id="3_5v0oy"]
+[ext_resource type="PackedScene" uid="uid://budyhg57woexf" path="res://Isometric/tscn/UI.tscn" id="3_d6yug"]
+
+[node name="Main" type="Node" unique_id=1269695740]
+script = ExtResource("1_iypxs")
+starting_scene = "uid://x7dptq70mnqv"
+
+[node name="SceneContainer" type="Node" parent="." unique_id=1288641356]
+
+[node name="GlobalUI" type="CanvasLayer" parent="." unique_id=57022505]
+layer = 4
+
+[node name="2DpausemenuIG" parent="GlobalUI" unique_id=18131761 groups=["pause_menu"] instance=ExtResource("3_5v0oy")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1218314612]
+
+[node name="Ui" parent="HUD" unique_id=607680793 instance=ExtResource("3_d6yug")]

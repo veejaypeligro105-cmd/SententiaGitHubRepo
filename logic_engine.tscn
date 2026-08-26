@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://clr8jy8dcf4bo"]
+
+[ext_resource type="Script" uid="uid://bpwtnrvs55ygd" path="res://newcombatAce/logic_engine.gd" id="1_tml7f"]
+
+[node name="LogicEngine" type="Node" unique_id=1802617622]
+script = ExtResource("1_tml7f")

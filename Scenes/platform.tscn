@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cwdaf75srurvw"]
+
+[ext_resource type="Texture2D" uid="uid://s8dydfx4sf8h" path="res://assets/Grass1.png" id="1_1rc8e"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_n5262"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrs20"]
+albedo_texture = ExtResource("1_1rc8e")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mlqre"]
+material = SubResource("StandardMaterial3D_mrs20")
+size = Vector2(50, 50)
+
+[node name="platform" type="StaticBody3D" unique_id=1942983363]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1318036153]
+shape = SubResource("WorldBoundaryShape3D_n5262")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1194207333]
+mesh = SubResource("PlaneMesh_mlqre")

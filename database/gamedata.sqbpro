@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="gamedata.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1070"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="questions" custom_title="0" dock_id="1" table="4,9:mainquestions"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000011300ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">CREATE TABLE IF NOT EXISTS users (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	email TEXT UNIQUE NOT NULL,
+	password TEXT NOT NULL,
+	progress INTEGER DEFAULT 0,
+	item TEXT DEFAULT ''
+);
+
+CREATE TABLE IF NOT EXISTS questions (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	type TEXT,
+	question TEXT,
+	choice1 TEXT,
+	choice2 TEXT,
+	choice3 TEXT,
+	choice4 TEXT,
+	correct_card TEXT
+);
+
+
+INSERT INTO questions (type, question, choice1, choice2, choice3, choice4, correct_card) VALUES
+('Negation','What is the negation of &quot;The sun is shining&quot;?','The sun is shining','The sun is not shining','The sun might be shining','The sun was shining','The sun is not shining'),
+
+('Conjunction','What does p ∧ q mean in logic?','p or q','p and q','not p','p implies q','p and q'),
+
+('Disjunction','What does p ∨ q mean in logic?','p and q','p or q (at least one is true)','not p','p implies q','p or q (at least one is true)'),
+
+('Negation','What is the negation of &quot;All students passed&quot;?','Some students passed','All students failed','Some students did not pass','No students passed','Some students did not pass'),
+
+('Conjunction','Which statement represents p ∧ q?','Only p is true','p and q are both true','Either p or q is true','Neither is true','p and q are both true'),
+
+('Disjunction','Which is true for p ∨ q?','Both must be true','At least one is true','Both must be false','Only one must be false','At least one is true'),
+
+('Negation','What is the negation of &quot;She is happy&quot;?','She is happy','She is not happy','She might be happy','She was happy','She is not happy'),
+
+('Conjunction','When is p ∧ q true?','When both p and q are true','When either p or q is true','When both are false','When one is false','When both p and q are true'),
+
+('Disjunction','When is p ∨ q false?','When both p and q are false','When at least one is true','When both are true','When one is true','When both p and q are false'),
+
+('Negation','What is the negation of &quot;It is hot today&quot;?','It is hot today','It is not hot today','It might be hot today','It was hot today','It is not hot today'),
+
+('Negation','What is the correct negation of: &quot;It is raining&quot;?','It is raining','It is not raining','It is sunny','It was raining','It is not raining'),
+
+('Conjunction','What does &quot;p ∧ q&quot; mean?','p or q','p and q','not p','p implies q','p and q'),
+
+('Disjunction','What does &quot;p ∨ q&quot; mean?','p and q','not p','p or q (at least one is true)','p implies q','p or q (at least one is true)'),
+
+('Negation','What is the negation of: &quot;All students passed&quot;?','All students passed','All students failed','Some students did not pass','No one passed','Some students did not pass'),
+
+('Conjunction','When is &quot;p ∧ q&quot; true?','When both p and q are true','When only one is true','When both are false','When neither is true','When both p and q are true'),
+
+('Disjunction','When is &quot;p ∨ q&quot; true?','When both are false','When at least one is true','When both are true','When neither is true','When at least one is true'),
+
+('Negation','What is the negation of: &quot;The door is open&quot;?','The door is open','The door is closed','The door is not open','The door was open','The door is not open'),
+
+('Conjunction','What happens in &quot;p ∧ q&quot; if one statement is false?','The result is true','The result is false','It depends on q','It is undefined','The result is false'),
+
+('Disjunction','What happens in &quot;p ∨ q&quot; if one statement is true?','The result is false','The result is true','It depends on the other statement','It is undefined','The result is true'),
+
+('Negation','What is the negation of: &quot;She is happy&quot;?','She is happy','She is not happy','She is very happy','She was happy','She is not happy'),
+
+('Conjunction','Which statement shows &quot;p ∧ q&quot;?','Only p is true','Only q is true','Both p and q are true','Neither is true','Both p and q are true'),
+
+('Disjunction','Which statement shows &quot;p ∨ q&quot;?','Both must be true','At least one is true','Both must be false','Only one must be true','At least one is true'),
+
+('Negation','What is the negation of: &quot;The light is on&quot;?','The light is on','The light is off','The light is broken','The light was on','The light is off'),
+
+('Conjunction','What is required for &quot;p ∧ q&quot; to be true?','At least one is true','Both must be true','Both must be false','Only one must be true','Both must be true'),
+
+('Disjunction','When is &quot;p ∨ q&quot; false?','When both are true','When at least one is true','When both are false','When one is false','When both are false');</sql><current_tab id="0"/></tab_sql></sqlb_project>

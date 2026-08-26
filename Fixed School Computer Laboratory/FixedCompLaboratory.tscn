@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://drdhyb5h1k3vn"]
+
+[ext_resource type="PackedScene" uid="uid://bfjsmr3pg1ywk" path="res://Fixed School Computer Laboratory/ComputerLabR.glb" id="1_stue6"]
+
+[sub_resource type="Environment" id="Environment_lihp4"]
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.18
+
+[node name="ComputerLaboratory" type="Node3D" unique_id=824464782]
+
+[node name="ComputerLabR" parent="." unique_id=797613146 instance=ExtResource("1_stue6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11141801, 0.023282528, 0.10828185)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="ComputerLabR" unique_id=961917899]
+environment = SubResource("Environment_lihp4")
+
+[node name="Lights" type="CanvasLayer" parent="ComputerLabR" unique_id=1465507906]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=476649160]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3, 2, -3)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=154219140]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.9585142, 2, -0.98810124)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=20945084]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.046605, 2, -0.9709103)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=2513973]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.046605, 2, 5.069893)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=455602748]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.0315151, 2, 5.069893)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=117666850]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.0565224, 2, -5.000841)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=1753974039]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.97780585, 2, 3.0269759)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="ComputerLabR/Lights" unique_id=1623000163]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.0565224, 2, 1.0395153)
+light_energy = 8.129
+shadow_enabled = true
+spot_range = 4.650843
+spot_angle = 62.598087
+
+[node name="AnimationTree" type="AnimationTree" parent="ComputerLabR/Lights" unique_id=661918258]

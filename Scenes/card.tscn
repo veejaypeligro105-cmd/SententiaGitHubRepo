@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cubvibucg66te"]
+
+[ext_resource type="Script" uid="uid://un3f5jiyn2jf" path="res://Scenes/Card.gd" id="1_wf8id"]
+[ext_resource type="Texture2D" uid="uid://jd2qb0i4ba05" path="res://Scenes/CardDeck/Card.png" id="2_eumee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf8id"]
+size = Vector2(84.99999, 158)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bnspj"]
+
+[node name="card" type="Node2D" unique_id=1604865298]
+position = Vector2(94, 542)
+script = ExtResource("1_wf8id")
+
+[node name="CardImage" type="Sprite2D" parent="." unique_id=2063590403]
+texture_filter = 1
+scale = Vector2(2.4250002, 3.0230768)
+texture = ExtResource("2_eumee")
+
+[node name="Cardlabel" type="Label" parent="." unique_id=929260184]
+offset_left = -31.0
+offset_top = -61.0
+offset_right = 31.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=818504603]
+position = Vector2(0, -7.6293945e-06)
+scale = Vector2(2.8199997, 3.4461536)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1858955962]
+position = Vector2(0.5319176, 0.87054443)
+scale = Vector2(0.35460997, 0.2901786)
+shape = SubResource("RectangleShape2D_wf8id")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355171305]
+libraries/ = SubResource("AnimationLibrary_bnspj")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

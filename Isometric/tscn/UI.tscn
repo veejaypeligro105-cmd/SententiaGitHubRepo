@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://budyhg57woexf"]
+
+[ext_resource type="Script" uid="uid://dlkc2mme4o8gi" path="res://Isometric/tscn/HUD_UI.gd" id="1_vfl6s"]
+[ext_resource type="Script" uid="uid://b3785u02v1lyg" path="res://Scenes/2Dhp_ui.gd" id="1_wrmh4"]
+[ext_resource type="PackedScene" uid="uid://dep3b3jvfymoc" path="res://CoinIcon.tscn" id="2_620bx"]
+[ext_resource type="PackedScene" uid="uid://dgwavjtveef57" path="res://Isometric/tscn/quest_tracker.tscn" id="3_620bx"]
+
+[node name="Ui" type="Control" unique_id=715652048]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vfl6s")
+
+[node name="Hp_ui" type="Control" parent="." unique_id=955663773]
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 593.0
+offset_right = 403.0
+offset_bottom = 677.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_wrmh4")
+
+[node name="HpBar" type="ProgressBar" parent="Hp_ui" unique_id=709507595]
+modulate = Color(0, 0.4500003, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.21400002
+anchor_right = 1.0
+anchor_bottom = 1.179
+offset_left = 4.0
+offset_top = -7.9760017
+offset_bottom = -7.996002
+value = 100.0
+show_percentage = false
+
+[node name="HpCount" type="Label" parent="Hp_ui" unique_id=754362923]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 10.0
+offset_right = 286.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 25
+
+[node name="Coin" parent="." unique_id=954793167 instance=ExtResource("2_620bx")]
+layout_mode = 0
+offset_left = 1109.0
+offset_top = 5.0
+offset_right = 1238.6019
+offset_bottom = 61.666664
+scale = Vector2(0.3, 0.3)
+
+[node name="QuestTracker" parent="." unique_id=1380934620 instance=ExtResource("3_620bx")]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 251.0
+offset_right = 177.0
+offset_bottom = 370.0

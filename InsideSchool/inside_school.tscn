@@ -1,0 +1,1481 @@
+[gd_scene format=3 uid="uid://3buxvvktm3sy"]
+
+[ext_resource type="PackedScene" uid="uid://bjl0h70yvc1kv" path="res://InsideSchool/NewSchoolLobby.glb" id="2_croyj"]
+[ext_resource type="PackedScene" uid="uid://5xrq7yv6yw5o" path="res://Scenes/player.tscn" id="2_r1ruk"]
+[ext_resource type="PackedScene" uid="uid://bfyajl6rkbbed" path="res://pause_menu_ig.tscn" id="3_r1ruk"]
+[ext_resource type="PackedScene" uid="uid://cv004bqpth70a" path="res://Scenes/NPC/npc.tscn" id="4_xg7yl"]
+[ext_resource type="Resource" uid="uid://b7uroc2v2rkq6" path="res://Dialogues/Floor1NPC.dialogue" id="5_6yscx"]
+[ext_resource type="Script" uid="uid://dwdpftmo7msol" path="res://InsideSchool/inside_school_exit.gd" id="6_ii52d"]
+[ext_resource type="Script" uid="uid://b3785u02v1lyg" path="res://Scenes/2Dhp_ui.gd" id="7_7ktxw"]
+[ext_resource type="PackedScene" uid="uid://dep3b3jvfymoc" path="res://CoinIcon.tscn" id="8_8hrx7"]
+[ext_resource type="Script" uid="uid://ipma1pywfsyl" path="res://EnemyScript/enemyNPC.gd" id="8_kvhmx"]
+[ext_resource type="Script" uid="uid://nv4xqm6xlcbe" path="res://ItemsScript/ItemData.gd" id="9_406yo"]
+[ext_resource type="Script" uid="uid://bn1tigns082x0" path="res://EnemyScript/EnemyData.gd" id="9_fxrul"]
+[ext_resource type="Texture2D" uid="uid://c8fotcfgt51nb" path="res://ItemsSententia/Coffee.png" id="10_qfnvr"]
+[ext_resource type="Texture2D" uid="uid://y3tac1o3r3ue" path="res://Symbols Enemy NPCS/222.png" id="11_crobl"]
+[ext_resource type="Texture2D" uid="uid://bhu2opb28bj5d" path="res://ItemsSententia/candy.png" id="11_yx7tv"]
+[ext_resource type="Texture2D" uid="uid://dfud7602oymm3" path="res://Symbols Enemy NPCS/232.png" id="12_8hrx7"]
+[ext_resource type="Texture2D" uid="uid://dlurjfpdmdog2" path="res://Symbols Enemy NPCS/212.png" id="13_6dl75"]
+[ext_resource type="Script" uid="uid://dxpeub6504br6" path="res://EnemyScript/NpcBattle.gd" id="14_5fuvx"]
+[ext_resource type="Resource" uid="uid://dhtvrdn5d5yr4" path="res://ItemsResource/Coffee.tres" id="15_86quq"]
+[ext_resource type="Texture2D" uid="uid://bwrb6s24dp2vk" path="res://Symbols Enemy NPCS/226.png" id="15_f1nsp"]
+[ext_resource type="Texture2D" uid="uid://nfb0ouaso8nk" path="res://Symbols Enemy NPCS/236.png" id="16_86quq"]
+[ext_resource type="Texture2D" uid="uid://du7pave5tfdmy" path="res://Symbols Enemy NPCS/216.png" id="17_jl64l"]
+[ext_resource type="Texture2D" uid="uid://pime0pdgwgni" path="res://Symbols Enemy NPCS/211.png" id="18_qfnvr"]
+[ext_resource type="Texture2D" uid="uid://burfxf5li5bl3" path="res://Symbols Enemy NPCS/225.png" id="19_yx7tv"]
+[ext_resource type="Texture2D" uid="uid://ctmt33v6adyek" path="res://Symbols Enemy NPCS/235.png" id="20_t0hqv"]
+[ext_resource type="Texture2D" uid="uid://bhxvc2k7pdppo" path="res://Symbols Enemy NPCS/215.png" id="21_egq7q"]
+[ext_resource type="Texture2D" uid="uid://bte85gm7wy2ks" path="res://Symbols Enemy NPCS/214.png" id="22_3jaif"]
+[ext_resource type="Texture2D" uid="uid://moqx483scbd3" path="res://Symbols Enemy NPCS/224.png" id="23_0u6m4"]
+[ext_resource type="Resource" uid="uid://bnqwvpqpfwr7j" path="res://ItemsResource/CandyHp.tres" id="23_jl64l"]
+[ext_resource type="Texture2D" uid="uid://dl21jad0wgecy" path="res://Symbols Enemy NPCS/234.png" id="24_5ovlf"]
+[ext_resource type="Script" uid="uid://0b3dqsn654uu" path="res://InsideSchool/(temporary_comlab).gd" id="26_6dl75"]
+
+[sub_resource type="Environment" id="Environment_ii52d"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.54
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r1ruk"]
+size = Vector3(15.032871, 2.536621, 1.118042)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xg7yl"]
+size = Vector3(0.678772, 0.8954468, 1.602232)
+
+[sub_resource type="Animation" id="Animation_croyj"]
+resource_name = "Lights"
+length = 2.2333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpotLight3D:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.101985, 1.1996303, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10198506, 0.19963033),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SpotLight3D3:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.49999997, 0.60198504, 0.6996303, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../SpotLight3D4:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.6333332, 1.7353183, 1.8329636, 1.9333333, 2.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SpotLight3D5:light_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.20198506, 0.29963034, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../SpotLight3D6:light_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0670364, 1.1690214, 1.2666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../SpotLight3D7:light_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5670363, 0.66902137, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../SpotLight3D8:light_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.5706081, 1.6725931, 1.7666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../SpotLight3D9:light_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.66666675, 0.7686518, 0.8662971, 0.96666676, 1.0666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../SpotLight3D10:light_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.06666669, 0.16865176, 0.26629707, 0.3666667, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../SpotLight3D11:light_color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.6999999, 1.801985, 1.8996303, 2, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../SpotLight3D12:light_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.3039415, 1.4059265, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../SpotLight3D13:light_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.63727474, 0.7392598, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../SpotLight3D14:light_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.012523466, 0.11450852, 0.20858206),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r1ruk"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xg7yl"]
+_data = {
+&"Lights": SubResource("Animation_croyj"),
+&"RESET": SubResource("Animation_r1ruk")
+}
+
+[sub_resource type="Resource" id="Resource_t0hqv"]
+script = ExtResource("9_406yo")
+item_name = "Coffee"
+description = "Oh... sweet dirty beans. 50+HP"
+heal_amount = 50
+icon = ExtResource("10_qfnvr")
+
+[sub_resource type="Resource" id="Resource_egq7q"]
+script = ExtResource("9_406yo")
+item_name = "Candy"
+description = "Mint Flavor... Yum. 10+HP"
+heal_amount = 10
+icon = ExtResource("11_yx7tv")
+
+[sub_resource type="Resource" id="Resource_3jaif"]
+script = ExtResource("9_406yo")
+item_name = "Candy"
+description = "Mint Flavor... Yum. 10+HP"
+heal_amount = 10
+icon = ExtResource("11_yx7tv")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a2f4"]
+atlas = ExtResource("11_crobl")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtshb"]
+atlas = ExtResource("11_crobl")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8qla"]
+atlas = ExtResource("12_8hrx7")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_delxy"]
+atlas = ExtResource("12_8hrx7")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxiom"]
+atlas = ExtResource("12_8hrx7")
+region = Rect2(64, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rops7"]
+atlas = ExtResource("12_8hrx7")
+region = Rect2(96, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqbit"]
+atlas = ExtResource("12_8hrx7")
+region = Rect2(128, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1tl4"]
+atlas = ExtResource("12_8hrx7")
+region = Rect2(160, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egaro"]
+atlas = ExtResource("12_8hrx7")
+region = Rect2(192, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmov5"]
+atlas = ExtResource("13_6dl75")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6w3pv"]
+atlas = ExtResource("13_6dl75")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfnvr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a2f4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtshb")
+}],
+"loop": false,
+"name": &"Battle-Npc-Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8qla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_delxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxiom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rops7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqbit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1tl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egaro")
+}],
+"loop": false,
+"name": &"Battle-Npc-Hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmov5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6w3pv")
+}],
+"loop": true,
+"name": &"Battle-Npc-Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trkxk"]
+atlas = ExtResource("13_6dl75")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m2rj"]
+atlas = ExtResource("13_6dl75")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yx7tv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trkxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m2rj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_0u6m4"]
+script = ExtResource("9_fxrul")
+sprite_3d_frames = SubResource("SpriteFrames_yx7tv")
+sprite_2d_frames = SubResource("SpriteFrames_qfnvr")
+anim_prefix = "1NM"
+enemy_id = "11"
+enemy_name = "Robot"
+item_drop = Array[ExtResource("9_406yo")]([SubResource("Resource_t0hqv"), SubResource("Resource_egq7q"), SubResource("Resource_3jaif")])
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n85vp"]
+atlas = ExtResource("13_6dl75")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baibu"]
+atlas = ExtResource("13_6dl75")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ovlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n85vp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baibu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k057v"]
+radius = 0.11816406
+height = 0.47790527
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_aeghb"]
+radius = 0.3488907
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thrim"]
+atlas = ExtResource("15_f1nsp")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68w4l"]
+atlas = ExtResource("15_f1nsp")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf6s6"]
+atlas = ExtResource("16_86quq")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e4lv"]
+atlas = ExtResource("16_86quq")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_520rq"]
+atlas = ExtResource("16_86quq")
+region = Rect2(64, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao0g4"]
+atlas = ExtResource("16_86quq")
+region = Rect2(96, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6y4l"]
+atlas = ExtResource("16_86quq")
+region = Rect2(128, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elj7v"]
+atlas = ExtResource("16_86quq")
+region = Rect2(160, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x3jw"]
+atlas = ExtResource("16_86quq")
+region = Rect2(192, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shmss"]
+atlas = ExtResource("17_jl64l")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp6rq"]
+atlas = ExtResource("17_jl64l")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1a2f4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thrim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68w4l")
+}],
+"loop": false,
+"name": &"Battle-Npc-Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf6s6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e4lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_520rq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao0g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6y4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elj7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x3jw")
+}],
+"loop": false,
+"name": &"Battle-Npc-Hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shmss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp6rq")
+}],
+"loop": true,
+"name": &"Battle-Npc-Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5fuvx"]
+load_path = "res://.godot/imported/NPCEnemyIdleSymbol5.png-cfb774c385a0153b190127a4e28a15a5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl64l"]
+atlas = SubResource("CompressedTexture2D_5fuvx")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfnvr"]
+atlas = SubResource("CompressedTexture2D_5fuvx")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtshb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl64l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfnvr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_b8qla"]
+script = ExtResource("9_fxrul")
+sprite_3d_frames = SubResource("SpriteFrames_gtshb")
+sprite_2d_frames = SubResource("SpriteFrames_1a2f4")
+anim_prefix = "1NM"
+enemy_id = "11"
+enemy_name = "Robot"
+item_drop = Array[ExtResource("9_406yo")]([ExtResource("15_86quq")])
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6wa0"]
+atlas = ExtResource("18_qfnvr")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47lg5"]
+atlas = ExtResource("18_qfnvr")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ik64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6wa0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47lg5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fliwi"]
+atlas = ExtResource("19_yx7tv")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk0tw"]
+atlas = ExtResource("19_yx7tv")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4v2s"]
+atlas = ExtResource("20_t0hqv")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhj4w"]
+atlas = ExtResource("20_t0hqv")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwv50"]
+atlas = ExtResource("20_t0hqv")
+region = Rect2(64, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24ksk"]
+atlas = ExtResource("20_t0hqv")
+region = Rect2(96, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebv1c"]
+atlas = ExtResource("20_t0hqv")
+region = Rect2(128, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivx8l"]
+atlas = ExtResource("20_t0hqv")
+region = Rect2(160, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nsh2"]
+atlas = ExtResource("20_t0hqv")
+region = Rect2(192, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e46f8"]
+atlas = ExtResource("21_egq7q")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_644px"]
+atlas = ExtResource("21_egq7q")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_delxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fliwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk0tw")
+}],
+"loop": false,
+"name": &"Battle-Npc-Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4v2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhj4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwv50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24ksk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebv1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivx8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nsh2")
+}],
+"loop": false,
+"name": &"Battle-Npc-Hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e46f8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_644px")
+}],
+"loop": true,
+"name": &"Battle-Npc-Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxiom"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl64l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfnvr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_rops7"]
+script = ExtResource("9_fxrul")
+sprite_3d_frames = SubResource("SpriteFrames_uxiom")
+sprite_2d_frames = SubResource("SpriteFrames_delxy")
+anim_prefix = "1NM"
+enemy_id = "11"
+enemy_name = "Robot"
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86quq"]
+atlas = ExtResource("21_egq7q")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx7tv"]
+atlas = ExtResource("21_egq7q")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egq7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86quq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx7tv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqbit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thrim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68w4l")
+}],
+"loop": false,
+"name": &"Battle-Npc-Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf6s6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e4lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_520rq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao0g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6y4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elj7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x3jw")
+}],
+"loop": false,
+"name": &"Battle-Npc-Hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shmss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp6rq")
+}],
+"loop": true,
+"name": &"Battle-Npc-Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1tl4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl64l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfnvr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_egaro"]
+script = ExtResource("9_fxrul")
+sprite_3d_frames = SubResource("SpriteFrames_t1tl4")
+sprite_2d_frames = SubResource("SpriteFrames_lqbit")
+anim_prefix = "1NM"
+enemy_id = "11"
+enemy_name = "Robot"
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrwp0"]
+atlas = ExtResource("17_jl64l")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsfyf"]
+atlas = ExtResource("17_jl64l")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irryy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrwp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsfyf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xmov5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thrim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68w4l")
+}],
+"loop": false,
+"name": &"Battle-Npc-Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf6s6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e4lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_520rq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao0g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6y4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elj7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x3jw")
+}],
+"loop": false,
+"name": &"Battle-Npc-Hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shmss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp6rq")
+}],
+"loop": true,
+"name": &"Battle-Npc-Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6w3pv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl64l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfnvr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_feptx"]
+script = ExtResource("9_fxrul")
+sprite_3d_frames = SubResource("SpriteFrames_6w3pv")
+sprite_2d_frames = SubResource("SpriteFrames_xmov5")
+anim_prefix = "1NM"
+enemy_id = "11"
+enemy_name = "Robot"
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crobl"]
+atlas = ExtResource("17_jl64l")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hrx7"]
+atlas = ExtResource("17_jl64l")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nvgb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crobl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hrx7")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gylw5"]
+atlas = ExtResource("23_0u6m4")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trdx4"]
+atlas = ExtResource("23_0u6m4")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ievsc"]
+atlas = ExtResource("24_5ovlf")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlbq3"]
+atlas = ExtResource("24_5ovlf")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ojp2"]
+atlas = ExtResource("24_5ovlf")
+region = Rect2(64, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1we7h"]
+atlas = ExtResource("24_5ovlf")
+region = Rect2(96, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip3um"]
+atlas = ExtResource("24_5ovlf")
+region = Rect2(128, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1qdy"]
+atlas = ExtResource("24_5ovlf")
+region = Rect2(160, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbdwo"]
+atlas = ExtResource("24_5ovlf")
+region = Rect2(192, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq625"]
+atlas = ExtResource("22_3jaif")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcliv"]
+atlas = ExtResource("22_3jaif")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trkxk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gylw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trdx4")
+}],
+"loop": false,
+"name": &"Battle-Npc-Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ievsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlbq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ojp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1we7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip3um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1qdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbdwo")
+}],
+"loop": false,
+"name": &"Battle-Npc-Hurt",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq625")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcliv")
+}],
+"loop": true,
+"name": &"Battle-Npc-Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxcyu"]
+atlas = ExtResource("22_3jaif")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81s4v"]
+atlas = ExtResource("22_3jaif")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3m2rj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxcyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81s4v")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_11i4t"]
+script = ExtResource("9_fxrul")
+sprite_3d_frames = SubResource("SpriteFrames_3m2rj")
+sprite_2d_frames = SubResource("SpriteFrames_trkxk")
+anim_prefix = "1NM"
+enemy_id = "11"
+enemy_name = "Robot"
+item_drop = Array[ExtResource("9_406yo")]([ExtResource("23_jl64l")])
+metadata/_custom_type_script = "uid://bn1tigns082x0"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7b7ks"]
+atlas = ExtResource("22_3jaif")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frtwo"]
+atlas = ExtResource("22_3jaif")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_spghs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b7ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frtwo")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ktxw"]
+size = Vector3(3.1435013, 1.640625, 2.1894531)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f1nsp"]
+size = Vector3(2.6012573, 1, 0.703125)
+
+[node name="InsideSchool" type="Node3D" unique_id=273114838]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1949309294]
+environment = SubResource("Environment_ii52d")
+
+[node name="Player" parent="." unique_id=1772266486 instance=ExtResource("2_r1ruk")]
+transform = Transform3D(5.5, 0, 0, 0, 5.5, 0, 0, 0, 5.5, 0, -0.0027762651, 8.130575)
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1610083164]
+
+[node name="PauseMenuIG" parent="PauseMenu" unique_id=1455197487 instance=ExtResource("3_r1ruk")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1682999672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4437027, -0.014596701, 6.3958073)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1123166256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48818207, 0.76831055, -4.2430763)
+shape = SubResource("BoxShape3D_r1ruk")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" unique_id=1827324906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8581735, 0.44560432, 0.21061516)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="StaticBody3D" unique_id=1431559951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8581735, 0.44560432, 2.0404415)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="StaticBody3D" unique_id=1239211632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1284733, 0.44560432, 0.19206476)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="StaticBody3D" unique_id=545331440]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.6529403, 0.44560432, -0.97193336)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="StaticBody3D" unique_id=1561851923]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.467616, 0.44560432, -0.9634404)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="StaticBody3D" unique_id=825281377]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.131253, 0.44560432, -3.5931165)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="StaticBody3D" unique_id=797982740]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.3971534, 0.44560432, -3.5907636)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="StaticBody3D" unique_id=1130744598]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.0618377, 0.44560432, -3.595677)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="StaticBody3D" unique_id=1051237469]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.050792, 0.44560432, -3.595677)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="StaticBody3D" unique_id=279963173]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.416616, 0.44560432, -0.97193336)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="StaticBody3D" unique_id=319066325]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.913567, 0.44560432, -0.97193336)
+shape = SubResource("BoxShape3D_xg7yl")
+
+[node name="NewSchoolLobby" parent="." unique_id=1163784133 instance=ExtResource("2_croyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47705603, 0, 6.4968)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1319469696]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CanvasLayer" unique_id=792677318]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.23901844, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="CanvasLayer" unique_id=960974362]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.7285843, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="CanvasLayer" unique_id=2135664772]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.617407, 1.9780073, 3.939385)
+light_color = Color(0.480821, 0.480821, 0.480821, 1)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="CanvasLayer" unique_id=2100191596]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.523634, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="CanvasLayer" unique_id=830849546]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 11.464666, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="CanvasLayer" unique_id=612417056]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 14.405699, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="CanvasLayer" unique_id=896412200]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.23901844, 1.9780073, 6.543744)
+light_color = Color(0.19695449, 0.19695449, 0.19695449, 1)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="CanvasLayer" unique_id=894997858]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.23901844, 1.9780073, 9.219131)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="CanvasLayer" unique_id=686346417]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.23901844, 1.9780073, 1.7461977)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="CanvasLayer" unique_id=2019204962]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.1057892, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="CanvasLayer" unique_id=536046677]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.059927, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="CanvasLayer" unique_id=1540188650]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -8.969304, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="CanvasLayer" unique_id=1617494191]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -11.862258, 1.9780073, 3.939385)
+light_color = Color(0.88566756, 0.88566756, 0.88566756, 1)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="CanvasLayer" unique_id=1854955110]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -14.755212, 1.9780073, 3.939385)
+light_energy = 16.0
+light_indirect_energy = 1.36
+light_volumetric_fog_energy = 6.257
+light_size = 0.1
+shadow_enabled = true
+shadow_blur = 0.072
+spot_range = 7.647825
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=1883212360]
+root_node = NodePath("../SpotLight3D2")
+libraries/ = SubResource("AnimationLibrary_xg7yl")
+autoplay = &"Lights"
+
+[node name="NPC" parent="." unique_id=1551344911 instance=ExtResource("4_xg7yl")]
+transform = Transform3D(3, 0, 0, 0, 2.722453, -1.2602572, 0, 1.2602572, 2.722453, -0.7485912, 0.32080764, 7.9351425)
+dialogue_resource = ExtResource("5_6yscx")
+intro_dialogue = null
+repeat_dialogue = null
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=1554357332]
+
+[node name="Hp_ui" type="Control" parent="Ui" unique_id=99819096]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 42.0
+offset_top = 577.0
+offset_right = 406.0
+offset_bottom = 661.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("7_7ktxw")
+
+[node name="HpBar" type="ProgressBar" parent="Ui/Hp_ui" unique_id=334204147]
+modulate = Color(0, 0.79, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.21400002
+anchor_right = 1.0
+anchor_bottom = 1.179
+offset_left = 4.0
+offset_top = -7.9760017
+offset_bottom = -7.996025
+value = 100.0
+show_percentage = false
+
+[node name="HpCount" type="Label" parent="Ui/Hp_ui" unique_id=1094527908]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -16.0
+offset_right = 240.0
+offset_bottom = 70.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Panel" parent="Ui" unique_id=238973427 instance=ExtResource("8_8hrx7")]
+offset_left = 958.0
+offset_top = 17.0
+offset_right = 1139.0
+offset_bottom = 73.0
+
+[node name="EnemyNpc1" type="CharacterBody3D" parent="." unique_id=666629131]
+transform = Transform3D(1, 0, 0, 0, 0.99697596, 0.07771089, 0, -0.07771089, 0.99697596, -0.40633452, 0.5307059, 5.1052175)
+script = ExtResource("8_kvhmx")
+enemy_data = SubResource("Resource_0u6m4")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyNpc1" unique_id=873013559]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.21890542, -0.01706314)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_5ovlf")
+animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc1" unique_id=1495411824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28179955, 9.536743e-07)
+shape = SubResource("CapsuleShape3D_k057v")
+
+[node name="Area3D" type="Area3D" parent="EnemyNpc1" unique_id=1661222992]
+script = ExtResource("14_5fuvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc1/Area3D" unique_id=1588205663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028234422, -0.084943205, -0.006620884)
+shape = SubResource("SphereShape3D_aeghb")
+debug_fill = false
+
+[node name="EnemyNpc2" type="CharacterBody3D" parent="." unique_id=1076141813]
+transform = Transform3D(1, 0, 0, 0, 0.98792243, 0.15495181, 0, -0.15495181, 0.98792243, 3.52665, 0.51167715, 3.279398)
+script = ExtResource("8_kvhmx")
+enemy_data = SubResource("Resource_b8qla")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyNpc2" unique_id=135025110]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.21890542, -0.01706314)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_2ik64")
+animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc2" unique_id=1758944361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28179955, 9.536743e-07)
+shape = SubResource("CapsuleShape3D_k057v")
+
+[node name="Area3D" type="Area3D" parent="EnemyNpc2" unique_id=248520576]
+script = ExtResource("14_5fuvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc2/Area3D" unique_id=656002765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028234422, -0.084943205, -0.006620884)
+shape = SubResource("SphereShape3D_aeghb")
+debug_fill = false
+
+[node name="EnemyNpc3" type="CharacterBody3D" parent="." unique_id=157698918]
+transform = Transform3D(1, 0, 0, 0, 0.98792243, 0.15495181, 0, -0.15495181, 0.98792243, 8.163616, 0.51167715, 4.683487)
+script = ExtResource("8_kvhmx")
+enemy_data = SubResource("Resource_rops7")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyNpc3" unique_id=483022402]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.21890542, -0.01706314)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_egq7q")
+animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc3" unique_id=320579941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28179955, 9.536743e-07)
+shape = SubResource("CapsuleShape3D_k057v")
+
+[node name="Area3D" type="Area3D" parent="EnemyNpc3" unique_id=1640776819]
+script = ExtResource("14_5fuvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc3/Area3D" unique_id=1338258935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028234422, -0.084943205, -0.006620884)
+shape = SubResource("SphereShape3D_aeghb")
+debug_fill = false
+
+[node name="EnemyNpc4" type="CharacterBody3D" parent="." unique_id=768513677]
+transform = Transform3D(1, 0, 0, 0, 0.98792243, 0.15495181, 0, -0.15495181, 0.98792243, 11.674241, 0.51167715, 3.3429086)
+script = ExtResource("8_kvhmx")
+enemy_data = SubResource("Resource_egaro")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyNpc4" unique_id=753085872]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.21890542, -0.01706314)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_irryy")
+animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc4" unique_id=964155793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28179955, 9.536743e-07)
+shape = SubResource("CapsuleShape3D_k057v")
+
+[node name="Area3D" type="Area3D" parent="EnemyNpc4" unique_id=2099134847]
+script = ExtResource("14_5fuvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc4/Area3D" unique_id=1512286770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028234422, -0.084943205, -0.006620884)
+shape = SubResource("SphereShape3D_aeghb")
+debug_fill = false
+
+[node name="EnemyNpc5" type="CharacterBody3D" parent="." unique_id=337646266]
+transform = Transform3D(1, 0, 0, 0, 0.98792243, 0.15495181, 0, -0.15495181, 0.98792243, -3.0943594, 0.51167715, 4.8893204)
+script = ExtResource("8_kvhmx")
+enemy_data = SubResource("Resource_feptx")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyNpc5" unique_id=1771502821]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.21890542, -0.01706314)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_1nvgb")
+animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc5" unique_id=1326887858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28179955, 9.536743e-07)
+shape = SubResource("CapsuleShape3D_k057v")
+
+[node name="Area3D" type="Area3D" parent="EnemyNpc5" unique_id=1008987878]
+script = ExtResource("14_5fuvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc5/Area3D" unique_id=2007914775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028234422, -0.084943205, -0.006620884)
+shape = SubResource("SphereShape3D_aeghb")
+debug_fill = false
+
+[node name="EnemyNpc6" type="CharacterBody3D" parent="." unique_id=1208277168]
+transform = Transform3D(1, 0, 0, 0, 0.98792243, 0.15495181, 0, -0.15495181, 0.98792243, -6.0637684, 0.51167715, 3.279398)
+script = ExtResource("8_kvhmx")
+enemy_data = SubResource("Resource_11i4t")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="EnemyNpc6" unique_id=1565016574]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.21890542, -0.01706314)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_spghs")
+animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc6" unique_id=1667621764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28179955, 9.536743e-07)
+shape = SubResource("CapsuleShape3D_k057v")
+
+[node name="Area3D" type="Area3D" parent="EnemyNpc6" unique_id=24383545]
+script = ExtResource("14_5fuvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyNpc6/Area3D" unique_id=892716734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028234422, -0.084943205, -0.006620884)
+shape = SubResource("SphereShape3D_aeghb")
+debug_fill = false
+
+[node name="ChangeScene" type="CanvasLayer" parent="." unique_id=679366838]
+
+[node name="Inside_school_exit" type="Area3D" parent="ChangeScene" unique_id=1414619282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.520035)
+script = ExtResource("6_ii52d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChangeScene/Inside_school_exit" unique_id=1826951044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11237717, 0.3203125, -0.59472656)
+shape = SubResource("BoxShape3D_7ktxw")
+
+[node name="(temporaryComlab)" type="Area3D" parent="ChangeScene" unique_id=2002303664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49965513, 3.5361745)
+script = ExtResource("26_6dl75")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChangeScene/(temporaryComlab)" unique_id=1316730013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.122406006, 0, -0.8011265)
+shape = SubResource("BoxShape3D_f1nsp")
+
+[connection signal="body_entered" from="EnemyNpc1/Area3D" to="EnemyNpc1/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="EnemyNpc1/Area3D" to="EnemyNpc1/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="EnemyNpc2/Area3D" to="EnemyNpc2/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="EnemyNpc2/Area3D" to="EnemyNpc2/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="EnemyNpc3/Area3D" to="EnemyNpc3/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="EnemyNpc3/Area3D" to="EnemyNpc3/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="EnemyNpc4/Area3D" to="EnemyNpc4/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="EnemyNpc4/Area3D" to="EnemyNpc4/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="EnemyNpc5/Area3D" to="EnemyNpc5/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="EnemyNpc5/Area3D" to="EnemyNpc5/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="EnemyNpc6/Area3D" to="EnemyNpc6/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="EnemyNpc6/Area3D" to="EnemyNpc6/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="ChangeScene/Inside_school_exit" to="ChangeScene/Inside_school_exit" method="_on_body_entered"]
+[connection signal="body_exited" from="ChangeScene/Inside_school_exit" to="ChangeScene/Inside_school_exit" method="_on_body_exited"]
+[connection signal="body_entered" from="ChangeScene/(temporaryComlab)" to="ChangeScene/(temporaryComlab)" method="_on_body_entered"]
+[connection signal="body_exited" from="ChangeScene/(temporaryComlab)" to="ChangeScene/(temporaryComlab)" method="_on_body_exited"]

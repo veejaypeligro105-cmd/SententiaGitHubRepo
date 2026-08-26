@@ -1,0 +1,1416 @@
+[gd_scene format=3 uid="uid://s533vx0c8itm"]
+
+[ext_resource type="Texture2D" uid="uid://b0n5kr1a14vth" path="res://New Travel Scene/School.png" id="1_gbfbk"]
+[ext_resource type="Texture2D" uid="uid://lyjkqqytltsh" path="res://free-sky-with-clouds-background-pixel-art-set/1-sheet.png" id="1_wukud"]
+[ext_resource type="Texture2D" uid="uid://e3m0jdmrbrc8" path="res://New Travel Scene/SchoolWall.png" id="2_ioo17"]
+[ext_resource type="Texture2D" uid="uid://b61xeu72h4ygx" path="res://New Travel Scene/Tree1.png" id="3_wse8f"]
+[ext_resource type="Texture2D" uid="uid://dyx2t28p2ds7e" path="res://New Travel Scene/Bush1.png" id="4_ic0uy"]
+[ext_resource type="Texture2D" uid="uid://cx620hxieeeoc" path="res://New Travel Scene/House.png" id="5_k3n1d"]
+[ext_resource type="Texture2D" uid="uid://bl41sno12nk5u" path="res://Travel Scene/Building1.png" id="7_2o6r5"]
+[ext_resource type="PackedScene" uid="uid://5xrq7yv6yw5o" path="res://Scenes/player.tscn" id="7_70uel"]
+[ext_resource type="Texture2D" uid="uid://u1via67csdci" path="res://Travel Scene/Building3.png" id="8_70uel"]
+[ext_resource type="Script" uid="uid://bqaadsgljao4g" path="res://sub_viewport.gd" id="8_hiqwa"]
+[ext_resource type="Texture2D" uid="uid://3go0us70kfld" path="res://Travel Scene/Building5.png" id="9_hiqwa"]
+[ext_resource type="Texture2D" uid="uid://vni4ys8nxo4q" path="res://Travel Scene/Tindahan.png" id="9_ioo17"]
+[ext_resource type="Texture2D" uid="uid://bqhtwfuwbqb14" path="res://Travel Scene/Building2.png" id="10_2u3nc"]
+[ext_resource type="PackedScene" uid="uid://c020ubirlnyxa" path="res://New Travel Scene/NewRoad.fbx" id="12_2u3nc"]
+[ext_resource type="Script" uid="uid://difvj7360cjet" path="res://school_entrance.gd" id="14_2u3nc"]
+[ext_resource type="Texture2D" uid="uid://dkqdupcmkop1m" path="res://Travel Scene/Tindahan2.png" id="14_70uel"]
+[ext_resource type="Script" uid="uid://dwcvkag6tdia2" path="res://Scenes/area_3d.gd" id="15_hiqwa"]
+[ext_resource type="Texture2D" uid="uid://dp2h66n83fxkg" path="res://New Travel Scene/TF.png" id="17_udxuc"]
+[ext_resource type="Texture2D" uid="uid://crkmqgvmqdnrk" path="res://New Travel Scene/closeRoadpng.png" id="18_ikiii"]
+[ext_resource type="PackedScene" uid="uid://bfyajl6rkbbed" path="res://pause_menu_ig.tscn" id="19_cbp6q"]
+[ext_resource type="Script" uid="uid://b3785u02v1lyg" path="res://Scenes/2Dhp_ui.gd" id="21_bc84e"]
+[ext_resource type="PackedScene" uid="uid://dep3b3jvfymoc" path="res://CoinIcon.tscn" id="22_wukud"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bc84e"]
+panorama = ExtResource("1_wukud")
+
+[sub_resource type="Sky" id="Sky_cbp6q"]
+sky_material = SubResource("PanoramaSkyMaterial_bc84e")
+
+[sub_resource type="Environment" id="Environment_26xuy"]
+background_mode = 2
+sky = SubResource("Sky_cbp6q")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ikiii"]
+
+[sub_resource type="Animation" id="Animation_gbfbk"]
+resource_name = "Lights_Animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpotLight3D:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.20306046),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpotLight3D3:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2636062, 0.33333334, 0.4, 0.46666667, 0.53333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpotLight3D12:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.06972715, 0.13639382, 0.20306048, 0.26972717),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpotLight3D9:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5714027, 0.67140275, 0.7744632),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpotLight3D7:light_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.33333334, 0.40306053, 0.46972713, 0.5363939, 0.6030605),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpotLight3D8:light_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.16972718, 0.23639378, 0.30306053, 0.36972713, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1), Color(0.98424715, 0.98424715, 1.00111965e-05, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ioo17"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpotLight3D:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.98424715, 0.98424715, 1.00111965e-05, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wse8f"]
+_data = {
+&"Lights_Animation": SubResource("Animation_gbfbk"),
+&"RESET": SubResource("Animation_ioo17")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_udxuc"]
+size = Vector3(0.57066345, 1, 1.256958)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hiqwa"]
+size = Vector3(0.30393696, 0.85424805, 0.69873047)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2u3nc"]
+size = Vector3(0.06524658, 1.5119629, 2.8486786)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70uel"]
+size = Vector3(0.19152832, 2.2276, 19.712715)
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_cbp6q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikiii"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbp6q"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26xuy"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc84e"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wukud"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il2jm"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjb0r"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mc2jv"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo7i5"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h6ng"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3ebs"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k83mh"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qktwf"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh8nc"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjr1n"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(896, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gggvi"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w44yn"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(1024, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ah6f"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(1088, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1i3r"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(1152, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my276"]
+atlas = ExtResource("17_udxuc")
+region = Rect2(1216, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yx0jh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikiii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbp6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26xuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc84e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wukud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il2jm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjb0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mc2jv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo7i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h6ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3ebs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k83mh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qktwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh8nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjr1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gggvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w44yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ah6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1i3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_my276")
+}],
+"loop": true,
+"name": &"Flicker",
+"speed": 6.5
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="House_To_School" type="Node3D" unique_id=19736166]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2089467104]
+environment = SubResource("Environment_26xuy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2005024544]
+
+[node name="School" type="Sprite3D" parent="CanvasLayer" unique_id=1058320368]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.9764521, 1.042159, -4.3933268)
+alpha_cut = 1
+texture_filter = 1
+texture = ExtResource("1_gbfbk")
+
+[node name="Walls" type="Sprite3D" parent="CanvasLayer" unique_id=1075049942]
+transform = Transform3D(-1.7265998e-08, 0, 0.395, 0, 0.395, 0, -0.395, 0, -1.7265998e-08, -0.85660934, 0.29760063, -3.2372723)
+alpha_cut = 3
+texture = ExtResource("2_ioo17")
+
+[node name="Walls2" type="Sprite3D" parent="CanvasLayer" unique_id=1062122348]
+transform = Transform3D(-1.7265998e-08, 0, 0.395, 0, 0.395, 0, -0.395, 0, -1.7265998e-08, -0.85660934, 0.29760063, -3.7420769)
+alpha_cut = 3
+texture = ExtResource("2_ioo17")
+
+[node name="Walls3" type="Sprite3D" parent="CanvasLayer" unique_id=1052980110]
+transform = Transform3D(-1.7265998e-08, 0, 0.395, 0, 0.395, 0, -0.395, 0, -1.7265998e-08, -0.85660934, 0.29760063, -5.028698)
+alpha_cut = 3
+texture = ExtResource("2_ioo17")
+
+[node name="Walls4" type="Sprite3D" parent="CanvasLayer" unique_id=755577055]
+transform = Transform3D(-1.7265998e-08, 0, 0.395, 0, 0.395, 0, -0.395, 0, -1.7265998e-08, -0.85660934, 0.29760063, -5.5350037)
+alpha_cut = 3
+texture = ExtResource("2_ioo17")
+
+[node name="Tree" type="Sprite3D" parent="CanvasLayer" unique_id=2018922313]
+transform = Transform3D(-1.04907336e-07, 0, 2.4, 0, 2.4, 0, -2.4, 0, -1.04907336e-07, -0.7943569, 0.4457881, -5.566578)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="Bush" type="Sprite3D" parent="CanvasLayer" unique_id=775405201]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.72692686, 0.14662284, -5.418867)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush2" type="Sprite3D" parent="CanvasLayer" unique_id=1785565318]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.71966594, 0.14662284, -5.548069)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush3" type="Sprite3D" parent="CanvasLayer" unique_id=1332778747]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.7290771, 0.14662284, -5.671671)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush4" type="Sprite3D" parent="CanvasLayer" unique_id=1985984002]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.8643471, 0.14662284, -4.6335945)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush5" type="Sprite3D" parent="CanvasLayer" unique_id=660215851]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.8570862, 0.14662284, -4.7627954)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush6" type="Sprite3D" parent="CanvasLayer" unique_id=104506691]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.86649734, 0.14662284, -4.8863974)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush7" type="Sprite3D" parent="CanvasLayer" unique_id=1116300289]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.8751505, 0.14662284, -3.9721012)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush8" type="Sprite3D" parent="CanvasLayer" unique_id=148833396]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.8678896, 0.14662284, -4.101302)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush9" type="Sprite3D" parent="CanvasLayer" unique_id=434333886]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.87730074, 0.14662284, -4.224905)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="House" type="Sprite3D" parent="CanvasLayer" unique_id=952461974]
+transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, -0.8449056, 0.643956, 9.151656)
+texture_filter = 0
+texture = ExtResource("5_k3n1d")
+
+[node name="Tindahan" type="Sprite3D" parent="CanvasLayer" unique_id=205167067]
+transform = Transform3D(-1.2261044e-07, 0, 2.805, 0, 2.805, 0, -2.805, 0, -1.2261044e-07, -0.8775098, 0.42107758, 6.742134)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_ioo17")
+
+[node name="Building" type="Sprite3D" parent="CanvasLayer" unique_id=1564617169]
+transform = Transform3D(-3.0007868e-07, 0, 6.865, 0, 6.865, 0, -6.865, 0, -3.0007868e-07, -1.0144151, 0.94907284, 7.7504563)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building1" type="Sprite3D" parent="CanvasLayer" unique_id=762105819]
+transform = Transform3D(-2.3451159e-07, 0, 5.365, 0, 5.365, 0, -5.365, 0, -2.3451159e-07, -0.89598703, 0.85896134, 2.2432804)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building2" type="Sprite3D" parent="CanvasLayer" unique_id=1261797749]
+transform = Transform3D(-2.395384e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.395384e-07, -1.0144151, 0.8257859, 6.0759892)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building3" type="Sprite3D" parent="CanvasLayer" unique_id=983240545]
+transform = Transform3D(-2.395384e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.395384e-07, -0.9196534, 0.8257859, 5.1262875)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building4" type="Sprite3D" parent="CanvasLayer" unique_id=716677294]
+transform = Transform3D(-2.395384e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.395384e-07, -0.9192761, 0.8257859, 4.1055355)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building5" type="Sprite3D" parent="CanvasLayer" unique_id=1891644319]
+transform = Transform3D(-1.9713838e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713838e-07, -0.9319807, 0.6573229, 3.2663414)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building7" type="Sprite3D" parent="CanvasLayer" unique_id=109968239]
+transform = Transform3D(-2.3451159e-07, 0, 5.365, 0, 5.365, 0, -5.365, 0, -2.3451159e-07, -0.9313674, 0.85896134, -2.562203)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building8" type="Sprite3D" parent="CanvasLayer" unique_id=1712651811]
+transform = Transform3D(-2.395384e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.395384e-07, -0.9688983, 0.8257859, 1.2705059)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building9" type="Sprite3D" parent="CanvasLayer" unique_id=1350772355]
+transform = Transform3D(-2.395384e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.395384e-07, -0.93208635, 0.8257859, 0.32080412)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building10" type="Sprite3D" parent="CanvasLayer" unique_id=1459703214]
+transform = Transform3D(-2.395384e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.395384e-07, -0.9792981, 0.8257859, -0.69994783)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building11" type="Sprite3D" parent="CanvasLayer" unique_id=429505528]
+transform = Transform3D(-1.9713838e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713838e-07, -0.98557377, 0.6573229, -1.5978909)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Tindahan2" type="Sprite3D" parent="CanvasLayer" unique_id=1419455482]
+transform = Transform3D(-1.2261044e-07, 0, 2.805, 0, 2.805, 0, -2.805, 0, -1.2261044e-07, -0.8775098, 0.42107758, -1.9540424)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_70uel")
+
+[node name="Tree2" type="Sprite3D" parent="CanvasLayer" unique_id=2065592647]
+transform = Transform3D(-1.04907336e-07, 0, 2.4, 0, 2.4, 0, -2.4, 0, -1.04907336e-07, -0.7943569, 0.4457881, -3.038525)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="Bush10" type="Sprite3D" parent="CanvasLayer" unique_id=133146108]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.72692686, 0.14662284, -2.8908143)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush11" type="Sprite3D" parent="CanvasLayer" unique_id=1956514693]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.71966594, 0.14662284, -3.0200162)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush12" type="Sprite3D" parent="CanvasLayer" unique_id=1202557941]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.7290771, 0.14662284, -3.1436176)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Tree3" type="Sprite3D" parent="CanvasLayer" unique_id=1830954532]
+transform = Transform3D(-1.04907336e-07, 0, 2.4, 0, 2.4, 0, -2.4, 0, -1.04907336e-07, -0.7943569, 0.4457881, 0.8068743)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="Bush13" type="Sprite3D" parent="CanvasLayer" unique_id=1109483250]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.72692686, 0.14662284, 0.9545851)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush14" type="Sprite3D" parent="CanvasLayer" unique_id=1572105666]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.71966594, 0.14662284, 0.8253832)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush15" type="Sprite3D" parent="CanvasLayer" unique_id=1056241069]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.7290771, 0.14662284, 0.70178175)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Tree4" type="Sprite3D" parent="CanvasLayer" unique_id=390411658]
+transform = Transform3D(-1.04907336e-07, 0, 2.4, 0, 2.4, 0, -2.4, 0, -1.04907336e-07, -0.8277293, 0.4457881, 8.223825)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="Bush16" type="Sprite3D" parent="CanvasLayer" unique_id=954193355]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.76029927, 0.14662284, 8.371536)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush17" type="Sprite3D" parent="CanvasLayer" unique_id=986468899]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.75303835, 0.14662284, 8.242334)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Bush18" type="Sprite3D" parent="CanvasLayer" unique_id=773210897]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -0.7624495, 0.14662284, 8.118733)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ic0uy")
+
+[node name="Building6" type="Sprite3D" parent="CanvasLayer" unique_id=70385745]
+transform = Transform3D(5.48, 0, 0, 0, 5.48, 0, 0, 0, 5.48, -1.4772589, 0.8257859, 6.4584174)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building12" type="Sprite3D" parent="CanvasLayer" unique_id=1937539281]
+transform = Transform3D(6.865, 0, 0, 0, 6.865, 0, 0, 0, 6.865, -1.7605993, 0.94907284, 7.0255966)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building13" type="Sprite3D" parent="CanvasLayer" unique_id=1532968569]
+transform = Transform3D(-2.395384e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.395384e-07, -1.4647385, 0.8257859, 6.5470576)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Walls5" type="Sprite3D" parent="CanvasLayer" unique_id=486883670]
+transform = Transform3D(-0.395, 0, -3.4531997e-08, 0, 0.395, 0, 3.4531997e-08, 0, -0.395, -1.1125207, 0.29760063, -3.0067081)
+alpha_cut = 3
+texture = ExtResource("2_ioo17")
+
+[node name="Walls6" type="Sprite3D" parent="CanvasLayer" unique_id=1730469098]
+transform = Transform3D(-0.395, 0, -3.4531997e-08, 0, 0.395, 0, 3.4531997e-08, 0, -0.395, -1.1125207, 0.29760063, -5.77966)
+alpha_cut = 3
+texture = ExtResource("2_ioo17")
+
+[node name="Tree5" type="Sprite3D" parent="CanvasLayer" unique_id=2076284443]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -0.8277293, 0.4457881, 8.223825)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="Tree6" type="Sprite3D" parent="CanvasLayer" unique_id=734255035]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -0.7943569, 0.4457881, 0.8068743)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="Tree7" type="Sprite3D" parent="CanvasLayer" unique_id=674549961]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -0.7943569, 0.4457881, -3.038525)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="Tree8" type="Sprite3D" parent="CanvasLayer" unique_id=997650257]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -0.7943569, 0.4457881, -5.566578)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_wse8f")
+
+[node name="pane" type="MeshInstance3D" parent="CanvasLayer" unique_id=1911408282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 13.145, -1.7292223, 0, 1.2503123)
+mesh = SubResource("PlaneMesh_ikiii")
+
+[node name="pane2" type="MeshInstance3D" parent="CanvasLayer" unique_id=435610246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 13.145, 2.1299582, 0, 1.2503123)
+mesh = SubResource("PlaneMesh_ikiii")
+
+[node name="pane3" type="MeshInstance3D" parent="CanvasLayer" unique_id=1230975477]
+transform = Transform3D(-4.371139e-08, 0, 2.935, 0, 1, 0, -1, 0, -1.2829292e-07, 0.18603706, 0, -12.676004)
+mesh = SubResource("PlaneMesh_ikiii")
+
+[node name="pane4" type="MeshInstance3D" parent="CanvasLayer" unique_id=1374723682]
+transform = Transform3D(-4.371139e-08, 0, 2.935, 0, 1, 0, -1, 0, -1.2829292e-07, 0.18603706, 0, 15.307556)
+mesh = SubResource("PlaneMesh_ikiii")
+
+[node name="Building14" type="Sprite3D" parent="CanvasLayer" unique_id=1004657299]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2812519, 0.85896134, 2.2432804)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building15" type="Sprite3D" parent="CanvasLayer" unique_id=760840010]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1628238, 0.8257859, 6.0759892)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building16" type="Sprite3D" parent="CanvasLayer" unique_id=1274547976]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2575855, 0.8257859, 5.1262875)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building17" type="Sprite3D" parent="CanvasLayer" unique_id=304948637]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2579628, 0.8257859, 4.1055355)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building18" type="Sprite3D" parent="CanvasLayer" unique_id=89301461]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.2452582, 0.6573229, 3.2663414)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building19" type="Sprite3D" parent="CanvasLayer" unique_id=1312471311]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2458715, 0.85896134, -2.562203)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building20" type="Sprite3D" parent="CanvasLayer" unique_id=313586154]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2083406, 0.8257859, 1.2705059)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building21" type="Sprite3D" parent="CanvasLayer" unique_id=2048110720]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2451526, 0.8257859, 0.32080412)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building22" type="Sprite3D" parent="CanvasLayer" unique_id=1388822206]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1979408, 0.8257859, -0.69994783)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building23" type="Sprite3D" parent="CanvasLayer" unique_id=476200992]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.1916652, 0.6573229, -1.5978909)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building24" type="Sprite3D" parent="CanvasLayer" unique_id=65199576]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2812519, 0.85896134, 5.553005)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building25" type="Sprite3D" parent="CanvasLayer" unique_id=1256244583]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1628238, 0.8257859, 9.385715)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building26" type="Sprite3D" parent="CanvasLayer" unique_id=457618782]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2575855, 0.8257859, 8.436012)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building27" type="Sprite3D" parent="CanvasLayer" unique_id=1922373345]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2579628, 0.8257859, 7.4152603)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building28" type="Sprite3D" parent="CanvasLayer" unique_id=701724205]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.2452582, 0.6573229, 6.576066)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building29" type="Sprite3D" parent="CanvasLayer" unique_id=1410989229]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2458715, 0.85896134, 0.7475219)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building30" type="Sprite3D" parent="CanvasLayer" unique_id=652720349]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2083406, 0.8257859, 4.5802307)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building31" type="Sprite3D" parent="CanvasLayer" unique_id=850607213]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2451526, 0.8257859, 3.630529)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building32" type="Sprite3D" parent="CanvasLayer" unique_id=374882531]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1979408, 0.8257859, 2.609777)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building33" type="Sprite3D" parent="CanvasLayer" unique_id=2134066314]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.1916652, 0.6573229, 1.711834)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building34" type="Sprite3D" parent="CanvasLayer" unique_id=1334835587]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2812519, 0.85896134, 11.926384)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building35" type="Sprite3D" parent="CanvasLayer" unique_id=1944202013]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1628238, 0.8257859, 15.759092)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building36" type="Sprite3D" parent="CanvasLayer" unique_id=1837010274]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2575855, 0.8257859, 14.809391)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building37" type="Sprite3D" parent="CanvasLayer" unique_id=863654684]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2579628, 0.8257859, 13.788639)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building38" type="Sprite3D" parent="CanvasLayer" unique_id=1200178166]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.2452582, 0.6573229, 12.949445)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building39" type="Sprite3D" parent="CanvasLayer" unique_id=436166717]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2458715, 0.85896134, 7.1209006)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building40" type="Sprite3D" parent="CanvasLayer" unique_id=560187994]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2083406, 0.8257859, 10.953609)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building41" type="Sprite3D" parent="CanvasLayer" unique_id=1955913135]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2451526, 0.8257859, 10.003908)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building42" type="Sprite3D" parent="CanvasLayer" unique_id=1254616226]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1979408, 0.8257859, 8.983156)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building43" type="Sprite3D" parent="CanvasLayer" unique_id=882485275]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.1916652, 0.6573229, 8.085213)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building44" type="Sprite3D" parent="CanvasLayer" unique_id=1966665402]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, -1.0692296, 0.85896134, 13.001214)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building45" type="Sprite3D" parent="CanvasLayer" unique_id=1383417886]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.1876577, 0.8257859, 16.833923)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building46" type="Sprite3D" parent="CanvasLayer" unique_id=477992449]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.092896, 0.8257859, 15.884221)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building47" type="Sprite3D" parent="CanvasLayer" unique_id=168786648]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.0925187, 0.8257859, 14.863469)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building48" type="Sprite3D" parent="CanvasLayer" unique_id=1743395448]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, -1.1052233, 0.6573229, 14.024275)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building49" type="Sprite3D" parent="CanvasLayer" unique_id=1552137955]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, -1.10461, 0.85896134, 8.19573)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building50" type="Sprite3D" parent="CanvasLayer" unique_id=776961285]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.1421409, 0.8257859, 12.0284395)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building51" type="Sprite3D" parent="CanvasLayer" unique_id=73713673]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.1053289, 0.8257859, 11.078737)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building52" type="Sprite3D" parent="CanvasLayer" unique_id=1232617006]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.1525407, 0.8257859, 10.057985)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building53" type="Sprite3D" parent="CanvasLayer" unique_id=1192117670]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, -1.1588163, 0.6573229, 9.160043)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building54" type="Sprite3D" parent="CanvasLayer" unique_id=398937160]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2812519, 0.85896134, -6.697229)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building55" type="Sprite3D" parent="CanvasLayer" unique_id=973811446]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1628238, 0.8257859, -2.86452)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building56" type="Sprite3D" parent="CanvasLayer" unique_id=1565393685]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2575855, 0.8257859, -3.8142219)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building57" type="Sprite3D" parent="CanvasLayer" unique_id=1061152363]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2579628, 0.8257859, -4.834974)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building58" type="Sprite3D" parent="CanvasLayer" unique_id=1035025087]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.2452582, 0.6573229, -5.6741676)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building59" type="Sprite3D" parent="CanvasLayer" unique_id=660619640]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2458715, 0.85896134, -11.502712)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building60" type="Sprite3D" parent="CanvasLayer" unique_id=2059050463]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2083406, 0.8257859, -7.6700034)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building61" type="Sprite3D" parent="CanvasLayer" unique_id=1222931476]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2451526, 0.8257859, -8.619705)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building62" type="Sprite3D" parent="CanvasLayer" unique_id=485192764]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1979408, 0.8257859, -9.640457)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building63" type="Sprite3D" parent="CanvasLayer" unique_id=1424038967]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.1916652, 0.6573229, -10.538401)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building64" type="Sprite3D" parent="CanvasLayer" unique_id=397279312]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, -1.0433998, 0.85896134, -7.7783527)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building65" type="Sprite3D" parent="CanvasLayer" unique_id=360229191]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.1618279, 0.8257859, -3.945644)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building66" type="Sprite3D" parent="CanvasLayer" unique_id=442585191]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.0670662, 0.8257859, -4.8953457)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building67" type="Sprite3D" parent="CanvasLayer" unique_id=1925841617]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.0666889, 0.8257859, -5.9160976)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building68" type="Sprite3D" parent="CanvasLayer" unique_id=985500091]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, -1.0793935, 0.6573229, -6.755292)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building69" type="Sprite3D" parent="CanvasLayer" unique_id=910857674]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, -1.0787802, 0.85896134, -12.583836)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building70" type="Sprite3D" parent="CanvasLayer" unique_id=167494792]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.1163111, 0.8257859, -8.751127)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building71" type="Sprite3D" parent="CanvasLayer" unique_id=117305937]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.0794991, 0.8257859, -9.700829)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building72" type="Sprite3D" parent="CanvasLayer" unique_id=2143149701]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, -1.1267109, 0.8257859, -10.7215805)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building73" type="Sprite3D" parent="CanvasLayer" unique_id=732894273]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, -1.1329865, 0.6573229, -11.619524)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building74" type="Sprite3D" parent="CanvasLayer" unique_id=19444986]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.4399662, 0.85896134, -5.173292)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building75" type="Sprite3D" parent="CanvasLayer" unique_id=1733516657]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.3215381, 0.8257859, -1.3405833)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building76" type="Sprite3D" parent="CanvasLayer" unique_id=881108344]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.4162998, 0.8257859, -2.290285)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building77" type="Sprite3D" parent="CanvasLayer" unique_id=1005723158]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.4166771, 0.8257859, -3.311037)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building78" type="Sprite3D" parent="CanvasLayer" unique_id=1577265305]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.4039725, 0.6573229, -4.1502314)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building79" type="Sprite3D" parent="CanvasLayer" unique_id=679197268]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.4045858, 0.85896134, -9.978775)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building80" type="Sprite3D" parent="CanvasLayer" unique_id=481459380]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.3670549, 0.8257859, -6.1460667)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building81" type="Sprite3D" parent="CanvasLayer" unique_id=733357837]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.4038669, 0.8257859, -7.0957685)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building82" type="Sprite3D" parent="CanvasLayer" unique_id=299907484]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.3566551, 0.8257859, -8.11652)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building83" type="Sprite3D" parent="CanvasLayer" unique_id=1073040757]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.3503795, 0.6573229, -9.014463)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building84" type="Sprite3D" parent="CanvasLayer" unique_id=99326221]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2812519, 0.85896134, 2.2432804)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building85" type="Sprite3D" parent="CanvasLayer" unique_id=1560202228]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1628238, 0.8257859, 6.0759892)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building86" type="Sprite3D" parent="CanvasLayer" unique_id=1950020370]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2575855, 0.8257859, 5.1262875)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building87" type="Sprite3D" parent="CanvasLayer" unique_id=344729996]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2579628, 0.8257859, 4.1055355)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building88" type="Sprite3D" parent="CanvasLayer" unique_id=225408480]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.2452582, 0.6573229, 3.2663414)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building89" type="Sprite3D" parent="CanvasLayer" unique_id=1438311950]
+transform = Transform3D(-2.3451156e-07, 0, 5.3649993, 0, 5.3649993, 0, -5.3649993, 0, -2.3451156e-07, 1.2458715, 0.85896134, -2.562203)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_2o6r5")
+
+[node name="Building90" type="Sprite3D" parent="CanvasLayer" unique_id=2009301138]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2083406, 0.8257859, 1.2705059)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_70uel")
+
+[node name="Building91" type="Sprite3D" parent="CanvasLayer" unique_id=2141764713]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.2451526, 0.8257859, 0.32080412)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building92" type="Sprite3D" parent="CanvasLayer" unique_id=422851233]
+transform = Transform3D(-2.3953837e-07, 0, 5.48, 0, 5.48, 0, -5.48, 0, -2.3953837e-07, 1.1979408, 0.8257859, -0.69994783)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building93" type="Sprite3D" parent="CanvasLayer" unique_id=157528847]
+transform = Transform3D(-1.9713836e-07, 0, 4.51, 0, 4.51, 0, -4.51, 0, -1.9713836e-07, 1.1916652, 0.6573229, -1.5978909)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building94" type="Sprite3D" parent="CanvasLayer" unique_id=2075867467]
+transform = Transform3D(-5.4796886, 0, -0.058437362, 0, 5.48, 0, 0.058437362, 0, -5.4796886, 0.9951606, 0.8257859, -11.390808)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building95" type="Sprite3D" parent="CanvasLayer" unique_id=1585638722]
+transform = Transform3D(-5.4796886, 0, -0.058437362, 0, 5.48, 0, 0.058437362, 0, -5.4796886, -0.025030017, 0.8257859, -11.332714)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building96" type="Sprite3D" parent="CanvasLayer" unique_id=1177761031]
+transform = Transform3D(-4.5097437, 0, -0.048093528, 0, 4.51, 0, 0.048093528, 0, -4.5097437, -0.9228555, 0.6573229, -11.316863)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building97" type="Sprite3D" parent="CanvasLayer" unique_id=908364766]
+transform = Transform3D(-4.164763, 0, -0.044414297, 0, 4.165, 0, 0.044414297, 0, -4.164763, 0.6366309, 0.8257859, -10.570813)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building98" type="Sprite3D" parent="CanvasLayer" unique_id=1270823017]
+transform = Transform3D(-4.164763, 0, -0.044414297, 0, 4.165, 0, 0.044414297, 0, -4.164763, -0.3835597, 0.8257859, -10.512719)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building99" type="Sprite3D" parent="CanvasLayer" unique_id=57879934]
+transform = Transform3D(-4.164763, 0, -0.044414297, 0, 4.165, 0, 0.044414297, 0, -4.164763, -1.2813852, 0.6573229, -10.496868)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building100" type="Sprite3D" parent="CanvasLayer" unique_id=1553808691]
+transform = Transform3D(5.48, 0, 0, 0, 5.48, 0, 0, 0, 5.48, 0.9951606, 0.8257859, 10.964809)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building101" type="Sprite3D" parent="CanvasLayer" unique_id=1174689646]
+transform = Transform3D(5.48, 0, 0, 0, 5.48, 0, 0, 0, 5.48, -0.025030017, 0.8257859, 11.022903)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building102" type="Sprite3D" parent="CanvasLayer" unique_id=794861246]
+transform = Transform3D(4.51, 0, 0, 0, 4.51, 0, 0, 0, 4.51, -0.9228555, 0.6573229, 11.038754)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building103" type="Sprite3D" parent="CanvasLayer" unique_id=1771551811]
+transform = Transform3D(4.165, 0, 0, 0, 4.165, 0, 0, 0, 4.165, 0.6366309, 0.8257859, 11.784804)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="Building104" type="Sprite3D" parent="CanvasLayer" unique_id=1580387870]
+transform = Transform3D(4.165, 0, 0, 0, 4.165, 0, 0, 0, 4.165, -0.3835597, 0.8257859, 11.842898)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_2u3nc")
+
+[node name="Building105" type="Sprite3D" parent="CanvasLayer" unique_id=744330006]
+transform = Transform3D(4.165, 0, 0, 0, 4.165, 0, 0, 0, 4.165, -1.2813852, 0.6573229, 11.858749)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_hiqwa")
+
+[node name="NewRoad" parent="." unique_id=952829669 instance=ExtResource("12_2u3nc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1510582, -4.7683716e-07, 1.211231)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="NewRoad" unique_id=1857988311]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.715, 0.605, 7.7268066)
+light_color = Color(0.98424715, 0.98424715, 1.00111965e-05, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="NewRoad" unique_id=682629488]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.715, 0.605, 0.15329885)
+light_color = Color(0.98424715, 0.98424715, 1.00111965e-05, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="NewRoad" unique_id=1545003539]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.715, 0.605, -3.5912454)
+light_color = Color(0.98424715, 0.98424715, 1.00111965e-05, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="NewRoad" unique_id=1786600545]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.71926326, 0.605, -7.344819)
+light_color = Color(0.98424715, 0.98424715, 1.00111965e-05, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="NewRoad" unique_id=2139263521]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.6936864, 0.605, -7.329294)
+light_color = Color(0.83661, 0.83661, 8.509517e-06, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="NewRoad" unique_id=269411712]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.71926326, 0.605, -3.5905497)
+light_color = Color(0.98424715, 0.98424715, 1.00111965e-05, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="NewRoad" unique_id=639749084]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.71926326, 0.605, 3.9343164)
+light_color = Color(0.98424715, 0.98424715, 1.00111965e-05, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="NewRoad" unique_id=1257328293]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.71926326, 0.605, 7.7051144)
+light_color = Color(0.98424715, 0.98424715, 1.00111965e-05, 1)
+light_energy = 3.059
+shadow_enabled = true
+shadow_blur = 1.396
+spot_angle = 67.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NewRoad" unique_id=1342063857]
+libraries/ = SubResource("AnimationLibrary_wse8f")
+autoplay = &"Lights_Animation"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="NewRoad" unique_id=1925101562]
+transform = Transform3D(-0.0066763763, 0.56228304, 0.826918, 0.0082524605, -0.8268773, 0.56232196, 0.9999437, 0.010578382, 0.00088032574, 3.937975, 4.781461, 7.048115)
+light_color = Color(0.9596781, 0.96648127, 0.9999998, 1)
+shadow_enabled = true
+
+[node name="Player" parent="NewRoad" unique_id=1772266486 instance=ExtResource("7_70uel")]
+transform = Transform3D(1.9998903, 1.1641532e-10, -0.020943562, 0.0014033305, 1.9955052, 0.13400334, 0.020896494, -0.1340107, 1.9953958, -0.057724714, 0.14846325, 7.5823326)
+
+[node name="School-Yard-Entrance-Enter" type="Area3D" parent="NewRoad" unique_id=1763097222]
+script = ExtResource("14_2u3nc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NewRoad/School-Yard-Entrance-Enter" unique_id=1404675041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1991988, 0.43481964, -5.6040936)
+shape = SubResource("BoxShape3D_udxuc")
+
+[node name="Home Entrance" type="Area3D" parent="NewRoad" unique_id=659307623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8395648, -0.12345117, 8.252327)
+script = ExtResource("15_hiqwa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NewRoad/Home Entrance" unique_id=23284106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18691546, 0.38374698, -0.62113285)
+shape = SubResource("BoxShape3D_hiqwa")
+debug_color = Color(0.18233031, 0.69707096, 1.92523e-07, 0.41960785)
+
+[node name="Minimap" type="CanvasLayer" parent="NewRoad" unique_id=1756416387]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="NewRoad/Minimap" unique_id=1332690927]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1131.0
+offset_top = 19.0
+offset_right = -935.0
+offset_bottom = 179.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="NewRoad/Minimap/SubViewportContainer" unique_id=1565493666]
+handle_input_locally = false
+size = Vector2i(196, 160)
+render_target_update_mode = 4
+script = ExtResource("8_hiqwa")
+
+[node name="Camera3D" type="Camera3D" parent="NewRoad/Minimap/SubViewportContainer/SubViewport" unique_id=274230929]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.69435, 0)
+fov = 23.5
+near = 0.054
+
+[node name="Line2D" type="Line2D" parent="NewRoad/Minimap/SubViewportContainer" unique_id=1067334938]
+position = Vector2(0, 2.7845297)
+scale = Vector2(1, 0.98342544)
+points = PackedVector2Array(-1, -3, 196, -3, 196, 158, -1, 158)
+closed = true
+width = 5.0
+
+[node name="Border of the map" type="StaticBody3D" parent="NewRoad" unique_id=706243324]
+transform = Transform3D(1, -3.4695802e-11, 1.1641532e-10, 9.6285646e-11, 1, 0, -1.1641532e-10, -3.637979e-12, 1, 0, 0, 0)
+
+[node name="Top-Boarder" type="CollisionShape3D" parent="NewRoad/Border of the map" unique_id=311982278]
+transform = Transform3D(0.022757035, 9.4094475e-11, -0.999741, 9.409448e-11, 1, 9.626071e-11, 0.999741, -9.6260694e-11, 0.022757035, 0.08215141, 0.5284424, -6.989009)
+shape = SubResource("BoxShape3D_2u3nc")
+
+[node name="Left-Boarder" type="CollisionShape3D" parent="NewRoad/Border of the map" unique_id=499787196]
+transform = Transform3D(-1, 4.2351647e-22, -8.742278e-08, 9.812377e-28, 1, 0, 8.742278e-08, 0, -1, -1.0336684, 1.0280151, -0.972795)
+shape = SubResource("BoxShape3D_70uel")
+
+[node name="Right-Boarder" type="CollisionShape3D" parent="NewRoad/Border of the map" unique_id=500635365]
+transform = Transform3D(1, 4.2351647e-22, 1.7484555e-07, -1.9611704e-27, 1, 8.271806e-25, -1.7484555e-07, 0, 1, 1.0841559, 0.32995343, -0.8663864)
+shape = SubResource("BoxShape3D_70uel")
+
+[node name="bottom-Boarder" type="CollisionShape3D" parent="NewRoad/Border of the map" unique_id=79171385]
+transform = Transform3D(-0.015672443, 9.7794675e-11, -0.99987715, 9.7794675e-11, 1, 9.6273815e-11, 0.99987715, -9.6273815e-11, -0.015672443, -0.2638448, 0.2614746, 8.63177)
+shape = SubResource("BoxShape3D_2u3nc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NewRoad/Border of the map" unique_id=2067335882]
+transform = Transform3D(0.9962373, 0.08666892, -1.227421e-13, -0.08666892, 0.9962373, -1.01032845e-11, -7.5334877e-13, 1.0075897e-11, 1, -0.40390122, 0.017989397, -5.515373)
+shape = SubResource("HeightMapShape3D_cbp6q")
+debug_color = Color(0.92, 0.064399995, 0.4922, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NewRoad/Border of the map" unique_id=1016024932]
+transform = Transform3D(0.98497725, 0.17268562, -1.1206661e-12, -0.17268562, 0.98497725, -2.0157915e-11, -2.3771332e-12, 2.0048588e-11, 1, -0.8047237, 0.04439339, 7.5586567)
+shape = SubResource("HeightMapShape3D_cbp6q")
+debug_color = Color(0.92, 0.064399995, 0.4922, 1)
+
+[node name="Boards" type="CanvasLayer" parent="NewRoad" unique_id=565318953]
+
+[node name="Flicker Animation2" type="AnimatedSprite3D" parent="NewRoad/Boards" unique_id=1135083558]
+transform = Transform3D(0.44115463, 0, -0.32001185, 0, 0.54499996, 0, 0.32001185, 0, 0.44115463, 0.9957438, 0.19867977, 0.08403158)
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_yx0jh")
+animation = &"Flicker"
+autoplay = "Flicker"
+frame_progress = 0.45816925
+
+[node name="Flicker Animation" type="AnimatedSprite3D" parent="NewRoad/Boards" unique_id=910111434]
+transform = Transform3D(0.4752871, 0, 0.26669696, 0, 0.545, 0, -0.26669696, 0, 0.4752871, -0.71552294, 0.22712526, 2.3172874)
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_yx0jh")
+animation = &"Flicker"
+autoplay = "Flicker"
+
+[node name="Boarder" type="CanvasLayer" parent="NewRoad" unique_id=1938920268]
+
+[node name="CloseRoad" type="Sprite3D" parent="NewRoad/Boarder" unique_id=1116932042]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, -0.5574865, 0.1613782, 9.846314)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("18_ikiii")
+
+[node name="CloseRoad2" type="Sprite3D" parent="NewRoad/Boarder" unique_id=765836742]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 0.7833293, 0.1613782, 9.846314)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("18_ikiii")
+
+[node name="CloseRoad3" type="Sprite3D" parent="NewRoad/Boarder" unique_id=1054889068]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, -0.5574865, 0.1613782, -5.875541)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("18_ikiii")
+
+[node name="CloseRoad4" type="Sprite3D" parent="NewRoad/Boarder" unique_id=1105770576]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 0.7833293, 0.1613782, -5.875541)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("18_ikiii")
+
+[node name="PauseMenu" type="CanvasLayer" parent="NewRoad" unique_id=663730559]
+
+[node name="PauseMenuIG" parent="NewRoad/PauseMenu" unique_id=1455197487 instance=ExtResource("19_cbp6q")]
+
+[node name="Ui" type="CanvasLayer" parent="NewRoad" unique_id=1290798373]
+
+[node name="Hp_ui" type="Control" parent="NewRoad/Ui" unique_id=583371596]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 42.0
+offset_top = 577.0
+offset_right = 406.0
+offset_bottom = 661.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("21_bc84e")
+
+[node name="HpBar" type="ProgressBar" parent="NewRoad/Ui/Hp_ui" unique_id=1165020025]
+modulate = Color(0, 0.79, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.21400002
+anchor_right = 1.0
+anchor_bottom = 1.179
+offset_left = 4.0
+offset_top = -7.9760017
+offset_bottom = -7.996025
+value = 100.0
+show_percentage = false
+
+[node name="HpCount" type="Label" parent="NewRoad/Ui/Hp_ui" unique_id=1055987744]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -16.0
+offset_right = 240.0
+offset_bottom = 70.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Panel" parent="NewRoad/Ui" unique_id=954793167 instance=ExtResource("22_wukud")]
+offset_left = 960.0
+offset_top = 15.0
+offset_right = 1141.0
+offset_bottom = 71.0
+
+[connection signal="body_entered" from="NewRoad/School-Yard-Entrance-Enter" to="NewRoad/School-Yard-Entrance-Enter" method="_on_body_entered"]
+[connection signal="body_exited" from="NewRoad/School-Yard-Entrance-Enter" to="NewRoad/School-Yard-Entrance-Enter" method="_on_body_exited"]
+[connection signal="body_entered" from="NewRoad/Home Entrance" to="NewRoad/Home Entrance" method="_on_body_entered"]
+[connection signal="body_exited" from="NewRoad/Home Entrance" to="NewRoad/Home Entrance" method="_on_body_exited"]

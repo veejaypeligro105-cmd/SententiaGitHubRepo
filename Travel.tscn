@@ -1,0 +1,411 @@
+[gd_scene format=3 uid="uid://6rbodddndtnt"]
+
+[ext_resource type="Texture2D" uid="uid://cg88112jtbo8u" path="res://background 1/orig_big.png" id="1_f0ekv"]
+[ext_resource type="PackedScene" uid="uid://5xrq7yv6yw5o" path="res://Scenes/player.tscn" id="2_f0ekv"]
+[ext_resource type="PackedScene" uid="uid://drjwm25khhqxs" path="res://Travel Scene/TravelScene.fbx" id="2_ss8f7"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3ql2n"]
+panorama = ExtResource("1_f0ekv")
+
+[sub_resource type="Sky" id="Sky_pj74d"]
+sky_material = SubResource("PanoramaSkyMaterial_3ql2n")
+
+[sub_resource type="Environment" id="Environment_b2b2q"]
+background_mode = 2
+sky = SubResource("Sky_pj74d")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ql2n"]
+size = Vector3(2.0375977, 1.341919, 1.0858383)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f0ekv"]
+size = Vector3(1, 2.4434814, 2.0923462)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ss8f7"]
+size = Vector3(1.0830078, 2.5674438, 2.3647804)
+
+[sub_resource type="Animation" id="Animation_f0ekv"]
+resource_name = "Lights"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpotLight3D:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.10376586, 0.20216453, 0.25404745, 0.3005632),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpotLight3D6:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.46629125, 0.5662913, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SpotLight3D8:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.20216453, 0.34528986, 0.43333334, 0.49378237, 0.55461067),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../SpotLight3D10:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.06666666, 0.23333335),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SpotLight3D15:light_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.30235225, 0.34886798, 0.39359465, 0.4436885, 0.49557143, 0.54745436, 0.60291547),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1), Color(0, 0, 0, 1), Color(1, 1, 0.0627451, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3ql2n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpotLight3D:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpotLight3D6:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SpotLight3D8:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../SpotLight3D10:light_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SpotLight3D15:light_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.0627451, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pj74d"]
+_data = {
+&"Lights": SubResource("Animation_f0ekv"),
+&"RESET": SubResource("Animation_3ql2n")
+}
+
+[node name="World" type="Node3D" unique_id=1567007575]
+
+[node name="Player" parent="." unique_id=1772266486 instance=ExtResource("2_f0ekv")]
+transform = Transform3D(0.71557075, -5.01444e-12, 0.69854015, 3.274181e-11, 1, 1.2369128e-10, -0.6985402, 1.533384e-10, 0.7155707, -3.6715689, 0.9784806, 4.563087)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=925204805]
+environment = SubResource("Environment_b2b2q")
+
+[node name="TravelScene" parent="." unique_id=340399096 instance=ExtResource("2_ss8f7")]
+transform = Transform3D(0.9999974, -0.001581798, 0.0016503048, 0.0015817251, 0.99999875, 4.534472e-05, -0.0016503746, -4.272545e-05, 0.9999987, 3.965149, 0.32977343, -6.492755)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TravelScene" unique_id=89256907]
+transform = Transform3D(1, -3.4695802e-11, 1.1641532e-10, 9.6285646e-11, 1, 0, -1.1641532e-10, -3.637979e-12, 1, 0, 0, 0)
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1586405608]
+transform = Transform3D(0.94338, 0.0007653754, -0.3317295, -0.0012274935, 0.9999987, -0.0011836055, 0.33171692, 0.0015237731, 0.9433786, -1.048075, 0.7434108, 1.6451893)
+visible = false
+shape = SubResource("BoxShape3D_3ql2n")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1883205912]
+transform = Transform3D(0.96340734, 0.005590017, -0.26798418, -0.006118513, 0.9999775, -0.0011370046, 0.2679729, 0.0027350641, 0.96342313, -2.42217, 1.0695423, 2.0727077)
+visible = false
+shape = SubResource("BoxShape3D_f0ekv")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1919931115]
+transform = Transform3D(0.7317224, 0, -0.6816047, 0, 1, 0, 0.6816047, 0, 0.7317224, -4.54339, 1.6660314, 10.236998)
+visible = false
+shape = SubResource("BoxShape3D_ss8f7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=584774883]
+transform = Transform3D(0.9559264, 0, -0.2936066, 0, 1, 0, 0.2936066, 0, 0.9559264, -0.12546039, 0.62457275, 3.1982136)
+visible = false
+shape = SubResource("BoxShape3D_ss8f7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1996096557]
+transform = Transform3D(0.8928533, 0, -0.45034802, 0, 1, 0, 0.45034802, 0, 0.8928533, -0.80358315, 1.2477398, 5.045593)
+visible = false
+shape = SubResource("BoxShape3D_ss8f7")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1246654832]
+transform = Transform3D(0.84352285, 0, -0.537094, 0, 1, 0, 0.537094, 0, 0.84352285, -1.6397963, 1.294385, 6.617495)
+visible = false
+shape = SubResource("BoxShape3D_ss8f7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1640971957]
+transform = Transform3D(0.7791192, 0, -0.62687683, 0, 1, 0, 0.62687683, 0, 0.7791192, -2.9310014, 1.488339, 8.448789)
+visible = false
+shape = SubResource("BoxShape3D_ss8f7")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1749759629]
+transform = Transform3D(0.6930496, 0, -0.72088987, 0, 1, 0, 0.72088987, 0, 0.6930496, -6.262362, 1.3912139, 11.817646)
+visible = false
+shape = SubResource("BoxShape3D_f0ekv")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1827252341]
+transform = Transform3D(0.80920166, 3.6389451e-06, -0.587537, -9.807609e-05, 1, -0.00012888416, 0.5875313, 0.00016192088, 0.8092017, -8.13742, 1.1709585, 11.645993)
+visible = false
+shape = SubResource("BoxShape3D_3ql2n")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1655791103]
+transform = Transform3D(0.63969326, 0.0003763784, -0.7686302, -0.0010636274, 0.9999985, -0.0003955284, 0.76862955, 0.001070553, 0.6396933, -7.901018, 2.0703526, 9.93016)
+visible = false
+shape = SubResource("BoxShape3D_f0ekv")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=197941585]
+transform = Transform3D(0.6981258, 0.0009419096, -0.715974, -0.002307703, 0.99999493, -0.0009346117, 0.715971, 0.0023047326, 0.69812596, -6.593355, 1.9168048, 8.669848)
+visible = false
+shape = SubResource("BoxShape3D_f0ekv")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=1610305347]
+transform = Transform3D(0.75830084, 0.004067643, -0.6518888, -0.005811485, 0.9999786, -0.000520469, 0.6518777, 0.004183131, 0.75831276, -5.2872467, 1.6951325, 7.197759)
+visible = false
+shape = SubResource("BoxShape3D_f0ekv")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=521879521]
+transform = Transform3D(0.8397849, 0.010925891, -0.54280555, -0.0116282655, 0.99992245, 0.0021368028, 0.5427943, 0.0045174737, 0.83985233, -4.022706, 0.98826337, 5.5376425)
+visible = false
+shape = SubResource("BoxShape3D_f0ekv")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="TravelScene/StaticBody3D" unique_id=828334276]
+transform = Transform3D(0.8988279, 0.011394899, -0.4381494, -0.011716942, 0.99993145, 0.001968645, 0.43814635, 0.0033643683, 0.8988963, -3.1181202, 0.6123682, 3.9215813)
+visible = false
+shape = SubResource("BoxShape3D_f0ekv")
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="TravelScene" unique_id=612371021]
+transform = Transform3D(0.97260606, -0.02840766, 0.23071782, -0.23149027, -0.02779206, 0.9724402, -0.021212624, -0.99920994, -0.03360682, -2.4467523, 1.0043553, 6.6513705)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="TravelScene" unique_id=1922211895]
+transform = Transform3D(0.9794469, -0.0007444096, 0.20170128, -0.20156047, -0.041153803, 0.9786112, 0.007572288, -0.99915254, -0.040458016, -1.7365222, 0.8892561, 5.4657373)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="TravelScene" unique_id=446640590]
+transform = Transform3D(0.9846993, 0.026801432, 0.1721891, -0.1711948, -0.035805922, 0.98458636, 0.032553714, -0.9989993, -0.030669803, -0.86851144, 0.8293462, 3.8259985)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="TravelScene" unique_id=1428352779]
+transform = Transform3D(0.9883472, 0.054154277, 0.14225833, -0.14081529, -0.029609168, 0.98959315, 0.057802845, -0.9980934, -0.021638393, -0.5403111, 0.8047042, 2.437726)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="TravelScene" unique_id=463097371]
+transform = Transform3D(0.99038416, 0.08126809, 0.11195932, -0.110473104, -0.022573933, 0.9936228, 0.08327719, -0.99643666, -0.013378934, -1.8207419, 1.0115798, 2.080964)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="TravelScene" unique_id=1107311272]
+transform = Transform3D(0.99080694, 0.108097166, 0.0813431, -0.08021925, -0.01471205, 0.9966687, 0.108933784, -0.9940315, -0.005905334, -2.223061, 1.0500523, 3.5153823)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="TravelScene" unique_id=624805365]
+transform = Transform3D(0.98961484, 0.13459645, 0.050461132, -0.05010465, -0.006036756, 0.9987259, 0.13472956, -0.9908821, 0.0007698365, -2.9640002, 1.097097, 4.898094)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="TravelScene" unique_id=1821423854]
+transform = Transform3D(0.9874755, 0.15569153, 0.025542498, -0.016788276, -0.05728595, 0.99821675, 0.15687713, -0.9861432, -0.053954676, -3.6400766, 1.1610044, 6.0161314)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="TravelScene" unique_id=325677143]
+transform = Transform3D(0.9649289, 0.20877904, 0.1591336, -0.14822197, -0.06701083, 0.9866813, 0.21666205, -0.9756643, -0.03371505, -4.6100993, 1.1839964, 7.3445463)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="TravelScene" unique_id=1292856557]
+transform = Transform3D(0.98447233, 0.175062, -0.012948626, -0.0083786715, 0.120542, 0.9926729, 0.17534013, -0.9771505, 0.12013701, -3.509894, 1.0739001, 8.040018)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="TravelScene" unique_id=104003680]
+transform = Transform3D(0.9412009, 0.29385373, 0.16670638, -0.20488065, 0.10409673, 0.97323585, 0.26863536, -0.9501652, 0.15818083, -4.5348086, 1.1081508, 9.345345)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D" type="SpotLight3D" parent="TravelScene" unique_id=1961958693]
+transform = Transform3D(1, -3.4924597e-10, 1.09139364e-10, 9.6285646e-11, -0.06416658, 0.9979393, -1.1641532e-10, -0.99793917, -0.0641666, -7.09721, 1.2583921, 11.790987)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="TravelScene" unique_id=199091872]
+transform = Transform3D(0.9986695, -0.0038208095, 0.051427312, -0.05156905, -0.07399255, 0.99592465, 0, -0.9972515, -0.07409114, -8.280115, 1.4143515, 10.963076)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="TravelScene" unique_id=1742507661]
+transform = Transform3D(0.9986695, -0.003820813, 0.051427394, -0.051564977, -0.08665724, 0.99490285, 0.0006552192, -0.99623084, -0.08673897, -6.9407206, 1.342332, 9.81167)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="TravelScene" unique_id=1597121734]
+transform = Transform3D(-0.66556704, -0.73995596, 0.09739582, 0.1603637, -0.01433545, 0.986954, -0.7289061, 0.6725027, 0.12820324, -5.862294, 1.1780561, 10.743109)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="TravelScene" unique_id=137685191]
+transform = Transform3D(-0.7729687, 0.630923, -0.06675274, -0.0017774052, 0.103060596, 0.9946735, 0.6344418, 0.7689699, -0.07854124, -5.721285, 1.271216, 8.62756)
+light_color = Color(1, 1, 0.0627451, 1)
+light_energy = 8.921
+light_size = 0.052
+light_specular = 2.559
+shadow_enabled = true
+spot_range = 1.1830765
+spot_angle = 48.640488
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TravelScene" unique_id=525816445]
+root_node = NodePath("../SpotLight3D17")
+libraries/ = SubResource("AnimationLibrary_pj74d")
+autoplay = &"Lights"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1540584755]
+transform = Transform3D(-0.64482933, -0.52706, -0.55353683, 0.22697231, -0.8235906, 0.5197906, -0.7298485, 0.20953868, 0.6507033, -5.333597, 4.781461, 7.048115)
+light_color = Color(1, 1, 0.52156866, 1)
+shadow_enabled = true

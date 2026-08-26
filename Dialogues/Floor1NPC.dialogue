@@ -1,0 +1,111 @@
+~ start
+Darwin: These signs… they keep switching between true and false.
+Logos: That is because you are now inside unstable logic. You must learn how truth behaves.
+
+#Expanding Operators
+Logos: You already know NOT, AND, and OR. Now you must understand how they behave in all situations.
+Logos: A conjunction, P ∧ Q, is only true when both P and Q are true.
+Logos: A disjunction, P ∨ Q, is false only when both P and Q are false.
+Darwin: So I need to check both values every time.
+Logos: Exactly.
+
+#Intro to Conditional
+Logos: You will now encounter conditionals.
+Logos: A conditional, written as P → Q, means ‘if P happens, then Q must follow.’
+Darwin: When does it fail?
+Logos: It fails only when P is true and Q is false.
+
+#Special Operators
+Logos: A biconditional, P ↔ Q, is true only when both sides have the same truth value.
+Logos: An exclusive OR, P ⊕ Q, is true only when exactly one is true.
+
+#Classifying Statements
+Logos: You must also classify statements.
+Logos: A tautology is always true.
+Logos: A contradiction is always false.
+Logos: A contingency can be either true or false.
+Darwin: So truth isn't random... it follows pattern.
+Logos: And now you are beginning to see them.
+
+#Evaluation
+Logos: Answer these before you proceed.
+
+~ question_1
+Logos: First: When is P ∧ Q true?
+
+- A. When one is true
+	Logos: Incorrect. AND requires both to be true.
+	=> question_1
+
+- B. When both are true
+	Logos: Correct.
+	=> question_2
+
+- C. When both are false
+	Logos: Incorrect. AND requires both to be true.
+	=> question_1
+
+- D. When P is true only
+	Logos: Incorrect. AND requires both to be true.
+	=> question_1
+
+
+~ question_2
+Logos: Second: When is P ∨ Q false?
+
+- A. When at least one is true
+	Logos: Incorrect. OR fails only when both are false.
+	=> question_2
+
+- B. When both are false
+	Logos: Correct.
+	=> question_3
+
+- C. When both are true
+	Logos: Incorrect. OR is true if at least one is true.
+	=> question_2
+
+- D. When P is true only
+	Logos: Incorrect. OR is still true if at least one is true.
+	=> question_2
+
+
+~ question_3
+Logos: Third: When does P → Q fail?
+
+- A. When P is false and Q is true
+	Logos: Incorrect. That is valid implication.
+	=> question_3
+
+- B. When both are true
+	Logos: Incorrect. That is valid implication.
+	=> question_3
+
+- C. When P is true and Q is false
+	Logos: Correct.
+	=> question_4
+
+- D. When both are false
+	Logos: Incorrect. That is valid implication.
+	=> question_3
+
+
+~ question_4
+Logos: Fourth: What is a tautology?
+
+- A. Always false
+	Logos: Incorrect. That is contradiction.
+	=> question_4
+
+- B. Sometimes true
+	Logos: Incorrect. That is contingency.
+	=> question_4
+
+- C. Always true
+	Logos: Correct.
+	Logos: You may now proceed.
+	=> END
+
+- D. Depends on variables
+	Logos: Incorrect. That is contingency.
+	=> question_4

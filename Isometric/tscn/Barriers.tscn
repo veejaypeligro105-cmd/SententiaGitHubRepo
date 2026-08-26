@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cs26k2c0ajt72"]
+
+[ext_resource type="Script" uid="uid://dspe0gygambjv" path="res://Isometric/tscn/barriers.gd" id="1_g42w2"]
+[ext_resource type="Texture2D" uid="uid://dekiqdq70e1br" path="res://assets/Sprite-0003.png" id="2_g42w2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17nep"]
+size = Vector2(37.25, 26.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6npu"]
+size = Vector2(47.1875, 34.375)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1232095282]
+position = Vector2(270, 115)
+script = ExtResource("1_g42w2")
+barrier_id = "BarrierTest"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=41930634]
+position = Vector2(2.000002, 1.0000019)
+scale = Vector2(0.7226558, 0.6757809)
+texture = ExtResource("2_g42w2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=684024207]
+position = Vector2(2.375, 1.625)
+shape = SubResource("RectangleShape2D_17nep")
+metadata/_edit_lock_ = true
+
+[node name="Interaction_Area" type="Area2D" parent="." unique_id=193408927]
+position = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_Area" unique_id=1369423324]
+position = Vector2(1.40625, 0.1875)
+shape = SubResource("RectangleShape2D_t6npu")
+debug_color = Color(0.96168846, 1.540184e-06, 0.51167804, 0.41960785)
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="Interaction_Area" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Interaction_Area" to="." method="_on_interaction_area_body_exited"]

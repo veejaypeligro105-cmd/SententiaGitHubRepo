@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+export/
+*.tmp
+
+# Godot SQLite - iOS files
+addons/godot-sqlite/bin/*.ios.*
+addons/godot-sqlite/bin/*ios*

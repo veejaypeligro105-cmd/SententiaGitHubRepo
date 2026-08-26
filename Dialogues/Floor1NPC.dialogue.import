@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b7uroc2v2rkq6"
+path="res://.godot/imported/Floor1NPC.dialogue-cb37a2a62d96ff123b2969004ef4f18b.tres"
+
+[deps]
+
+source_file="res://Dialogues/Floor1NPC.dialogue"
+dest_files=["res://.godot/imported/Floor1NPC.dialogue-cb37a2a62d96ff123b2969004ef4f18b.tres"]
+
+[params]
+
+defaults=true

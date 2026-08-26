@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cov4johblrrhi"]
+
+[ext_resource type="Texture2D" uid="uid://bgwjq42lqv7a3" path="res://ItemsSententia/Hp-potion.png" id="1_h3c51"]
+[ext_resource type="Script" uid="uid://nv4xqm6xlcbe" path="res://ItemsScript/ItemData.gd" id="2_uj4u2"]
+
+[resource]
+script = ExtResource("2_uj4u2")
+item_name = "Potion"
+description = "A Basic Potion +25hp"
+heal_amount = 25
+icon = ExtResource("1_h3c51")

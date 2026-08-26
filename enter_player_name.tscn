@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ccvqslfphocbg"]
+
+[ext_resource type="Script" uid="uid://ddpwst55rg0ow" path="res://enter_player_name.gd" id="1_4ybyq"]
+
+[node name="Enter_PlayerName" type="Node2D" unique_id=675253444]
+script = ExtResource("1_4ybyq")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2016877489]
+
+[node name="Control" type="Control" parent="UI" unique_id=248805324]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/Control" unique_id=1501782577]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 193.0
+offset_right = 585.0
+offset_bottom = 216.0
+scale = Vector2(2, 2)
+text = "Enter your Name"
+
+[node name="NameInput" type="LineEdit" parent="UI/Control" unique_id=995867490]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 281.0
+offset_right = 817.0
+offset_bottom = 349.0
+accessibility_name = "NameInput"
+placeholder_text = "Type your Character Name"
+
+[node name="Continue" type="Button" parent="UI/Control" unique_id=312771218]
+layout_mode = 0
+offset_left = 979.0
+offset_top = 561.0
+offset_right = 1114.0
+offset_bottom = 612.0
+theme_override_font_sizes/font_size = 25
+text = "continue"
+
+[connection signal="text_submitted" from="UI/Control/NameInput" to="." method="_on_name_input_text_submitted"]
+[connection signal="pressed" from="UI/Control/Continue" to="." method="_on_button_pressed"]

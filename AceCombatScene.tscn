@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://j5k2l3hf7oig"]
+
+[ext_resource type="Script" uid="uid://bk4cj28ul0nuf" path="res://newcombatAce/NewCombatAce.gd" id="1_58rr2"]
+[ext_resource type="Script" uid="uid://o8adv8e2hu0o" path="res://newcombatAce/StatementLabel.gd" id="2_f5ofd"]
+
+[node name="InGame" type="Control" unique_id=1449282688]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_58rr2")
+
+[node name="StatementPanel" type="Panel" parent="." unique_id=1974380766]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 178.0
+metadata/_edit_lock_ = true
+
+[node name="StatementLabel" type="RichTextLabel" parent="StatementPanel" unique_id=919511581]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 19.0
+offset_right = 1114.0
+offset_bottom = 153.0
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_f5ofd")
+metadata/_edit_lock_ = true
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=1543029590]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 10.450001
+anchor_right = 7.4000006
+anchor_bottom = 15.700001
+offset_left = 444.0
+offset_top = 101.99997
+offset_right = 399.99997
+offset_bottom = 1.0
+
+[node name="BtnChallenge" type="Button" parent="ButtonContainer" unique_id=978561717]
+layout_mode = 2
+text = "Challenge"
+metadata/_edit_lock_ = true
+
+[node name="BtnPresent" type="Button" parent="ButtonContainer" unique_id=131099200]
+layout_mode = 2
+text = "Present/Choices"
+metadata/_edit_lock_ = true
+
+[node name="BtnInventory" type="Button" parent="ButtonContainer" unique_id=176450471]
+layout_mode = 2
+text = "Inventory"
+metadata/_edit_lock_ = true
+
+[node name="FeedBackLabel" type="Label" parent="." unique_id=9867009]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 237.0
+offset_right = 796.0
+offset_bottom = 402.0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerHpBar" type="ProgressBar" parent="." unique_id=713402932]
+modulate = Color(0, 0.4509804, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 3.719
+offset_left = 20.0
+offset_top = 542.0
+offset_right = 260.0
+offset_bottom = 458.24
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+
+[node name="EnemyHpBar" type="ProgressBar" parent="." unique_id=1534718321]
+modulate = Color(0.05726988, 0.4597609, 1.540184e-06, 1)
+layout_mode = 0
+offset_left = 880.0
+offset_top = 542.0
+offset_right = 1140.0
+offset_bottom = 607.0
+value = 100.0
+
+[node name="ConfirmationPanel" type="Panel" parent="." unique_id=402072729]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 296.0
+offset_top = 193.0
+offset_right = 801.0
+offset_bottom = 407.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ConfirmationLabel" type="Label" parent="ConfirmationPanel" unique_id=347855539]
+layout_mode = 0
+offset_right = 543.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 25
+text = "Are you Sure?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnYes" type="Button" parent="ConfirmationPanel" unique_id=403231959]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 159.0
+offset_right = 199.0
+offset_bottom = 218.0
+text = "Yes
+"
+
+[node name="BtnNo" type="Button" parent="ConfirmationPanel" unique_id=2145540169]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 161.0
+offset_right = 488.0
+offset_bottom = 217.0
+text = "No
+"
+
+[node name="PresentPanel" type="Panel" parent="." unique_id=688135461]
+visible = false
+layout_mode = 0
+offset_left = 296.0
+offset_top = 193.0
+offset_right = 841.0
+offset_bottom = 447.0
+
+[node name="PresentLabel" type="Label" parent="PresentPanel" unique_id=587357102]
+layout_mode = 0
+offset_right = 543.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Btnchoice1" type="Button" parent="PresentPanel" unique_id=1692487761]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 145.0
+offset_right = 160.0
+offset_bottom = 204.0
+
+[node name="Btnchoice2" type="Button" parent="PresentPanel" unique_id=1860443008]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 142.0
+offset_right = 349.0
+offset_bottom = 201.0
+
+[node name="Btnchoice3" type="Button" parent="PresentPanel" unique_id=1445292341]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 139.0
+offset_right = 525.0
+offset_bottom = 198.0
+
+[node name="Timer" type="Label" parent="." unique_id=1254092627]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 472.0
+offset_right = 624.0
+offset_bottom = 515.0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ButtonContainer/BtnChallenge" to="." method="_on_btn_challenge_pressed"]
+[connection signal="pressed" from="ButtonContainer/BtnPresent" to="." method="_on_btn_present_pressed"]
+[connection signal="pressed" from="ButtonContainer/BtnInventory" to="." method="_on_btn_inventory_pressed"]
+[connection signal="pressed" from="ConfirmationPanel/BtnYes" to="." method="_on_btn_yes_pressed"]
+[connection signal="pressed" from="ConfirmationPanel/BtnNo" to="." method="_on_btn_no_pressed"]
+[connection signal="pressed" from="PresentPanel/Btnchoice1" to="." method="_on_btnchoice_1_pressed"]
+[connection signal="pressed" from="PresentPanel/Btnchoice2" to="." method="_on_btnchoice_2_pressed"]
+[connection signal="pressed" from="PresentPanel/Btnchoice3" to="." method="_on_btnchoice_3_pressed"]
